@@ -25,7 +25,8 @@ const dictionary = {
     conceptExtra:
       "Ideal for sensitive, senior, or calm dogs that thrive in low-stress spaces.",
     scheduleTitle: "Daily schedule",
-    scheduleHours: "<strong>Opening hours:</strong> 09:00–16:00",
+    scheduleHoursLabel: "Opening hours:",
+    scheduleHoursValue: "09:00–16:00",
     summerTitle: "Summer routine",
     summer1: "09:00–10:00 · Arrival",
     summer2: "10:00–12:00 · Outdoor time",
@@ -88,7 +89,8 @@ const dictionary = {
     conceptExtra:
       "Ideelt for sensitive, ældre eller rolige hunde, som trives i et miljø med lavt stressniveau.",
     scheduleTitle: "Dagsplan",
-    scheduleHours: "<strong>Åbningstider:</strong> 09:00–16:00",
+    scheduleHoursLabel: "Åbningstider:",
+    scheduleHoursValue: "09:00–16:00",
     summerTitle: "Sommerrutine",
     summer1: "09:00–10:00 · Modtagelse",
     summer2: "10:00–12:00 · Udetid",
@@ -151,7 +153,8 @@ const dictionary = {
     conceptExtra:
       "Ideal para perros sensibles, senior o tranquilos que se benefician de espacios sin estrés.",
     scheduleTitle: "Rutina diaria",
-    scheduleHours: "<strong>Horario:</strong> 09:00–16:00",
+    scheduleHoursLabel: "Horario:",
+    scheduleHoursValue: "09:00–16:00",
     summerTitle: "Rutina de verano",
     summer1: "09:00–10:00 · Acogida",
     summer2: "10:00–12:00 · Actividad exterior",
@@ -193,8 +196,17 @@ const dictionary = {
 const select = document.getElementById("language");
 
 const detectBrowserLanguage = () => {
-  const browserLang = (navigator.language || "en").slice(0, 2).toLowerCase();
-  return ["da", "es"].includes(browserLang) ? browserLang : "en";
+  const candidates = [
+    ...(Array.isArray(navigator.languages) ? navigator.languages : []),
+    navigator.language || ""
+  ];
+
+  for (const locale of candidates) {
+    const code = String(locale).toLowerCase().split(/[-_]/)[0];
+    if (["da", "es"].includes(code)) return code;
+  }
+
+  return "en";
 };
 
 const applyLanguage = (lang) => {
@@ -205,11 +217,7 @@ const applyLanguage = (lang) => {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
     if (translations[key]) {
-      if (translations[key].includes("<strong>")) {
-        element.innerHTML = translations[key];
-      } else {
-        element.textContent = translations[key];
-      }
+      element.textContent = translations[key];
     }
   });
 
