@@ -1,2 +1,3 @@
-# hygge-paws
-Hygge paws website
+# Hygge Paws
+
+Hygge Paws website
