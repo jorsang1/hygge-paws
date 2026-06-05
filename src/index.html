@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hygge Paws | Calm Dog Daycare in Copenhagen</title>
+    <meta
+      name="description"
+      content="Hygge Paws is a calm, home-style dog daycare with small groups, long walks, rest time, and personalized care in Copenhagen."
+    />
+    <meta name="theme-color" content="#7d9076" />
+    <meta property="og:title" content="Hygge Paws" />
+    <meta
+      property="og:description"
+      content="Small-group, calm dog daycare with personalized care, clear rules, and a hygge atmosphere."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skipToContent">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-grid">
+        <div>
+          <p class="eyebrow">Hygge Paws</p>
+          <h1 data-i18n="heroTitle">Calm daycare for happy dogs</h1>
+          <p data-i18n="heroSubtitle">
+            Small groups, long walks, rest, and personal attention in a warm home atmosphere.
+          </p>
+        </div>
+        <form class="language-switcher" aria-label="Language switcher">
+          <label for="language" data-i18n="languageLabel">Language</label>
+          <select id="language" name="language">
+            <option value="en">English</option>
+            <option value="da">Dansk</option>
+            <option value="es">Español</option>
+          </select>
+        </form>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <div class="container nav-links">
+          <a href="#concept" data-i18n="navConcept">Concept</a>
+          <a href="#schedule" data-i18n="navSchedule">Schedule</a>
+          <a href="#pricing" data-i18n="navPricing">Pricing</a>
+          <a href="#rules" data-i18n="navRules">Rules</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="section" id="concept">
+        <div class="container two-col">
+          <article class="card">
+            <h2 data-i18n="conceptTitle">A calm alternative to big daycare</h2>
+            <p data-i18n="conceptText">
+              We welcome only 3–5 dogs per day to create a peaceful routine with quality care.
+            </p>
+            <h3 data-i18n="conceptNoTitle">Not our style</h3>
+            <ul>
+              <li data-i18n="conceptNo1">Mass daycare with too many dogs</li>
+              <li data-i18n="conceptNo2">Loud, stressful environment</li>
+              <li data-i18n="conceptNo3">Chaotic routines</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3 data-i18n="conceptYesTitle">What dogs get at Hygge Paws</h3>
+            <ul>
+              <li data-i18n="conceptYes1">Small groups (max 3–5 dogs)</li>
+              <li data-i18n="conceptYes2">Long outdoor time and nature walks</li>
+              <li data-i18n="conceptYes3">Rest, calm cuddles, and indoor comfort</li>
+              <li data-i18n="conceptYes4">Clear communication and daily photos</li>
+            </ul>
+            <p data-i18n="conceptExtra">
+              Ideal for sensitive, senior, or calm dogs that thrive in low-stress spaces.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="schedule">
+        <div class="container">
+          <h2 data-i18n="scheduleTitle">Daily schedule</h2>
+          <p><strong data-i18n="scheduleHoursLabel">Opening hours:</strong> <span data-i18n="scheduleHoursValue">09:00–16:00</span></p>
+          <div class="two-col">
+            <article class="card">
+              <h3 data-i18n="summerTitle">Summer routine</h3>
+              <ul>
+                <li data-i18n="summer1">09:00–10:00 · Arrival</li>
+                <li data-i18n="summer2">10:00–12:00 · Outdoor time</li>
+                <li data-i18n="summer3">12:00–14:00 · Eat, rest, calm & cuddles</li>
+                <li data-i18n="summer4">14:00–15:00 · Short walk</li>
+                <li data-i18n="summer5">15:00–16:00 · Pick-up prep</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 data-i18n="winterTitle">Winter routine</h3>
+              <ul>
+                <li data-i18n="winter1">09:00–10:00 · Arrival</li>
+                <li data-i18n="winter2">10:00–11:00 · Outdoor time</li>
+                <li data-i18n="winter3">11:00–14:00 · Eat, rest, calm & cuddles</li>
+                <li data-i18n="winter4">14:00–15:00 · Short walk</li>
+                <li data-i18n="winter5">15:00–16:00 · Pick-up prep</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <h2 data-i18n="pricingTitle">Simple pricing</h2>
+          <div class="card">
+            <table>
+              <caption class="sr-only" data-i18n="pricingCaption">Hygge Paws pricing table</caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="pricingService">Service</th>
+                  <th scope="col" data-i18n="pricingPrice">Price (DKK)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="pricingDay">Full day (09:00–16:00)</td>
+                  <td>260</td>
+                </tr>
+                <tr>
+                  <td data-i18n="pricingHalf">Half day (09:00–13:00 or 12:00–16:00)</td>
+                  <td>160</td>
+                </tr>
+                <tr>
+                  <td data-i18n="pricingHourly">Single hours</td>
+                  <td>50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="rules">
+        <div class="container">
+          <h2 data-i18n="rulesTitle">Important admission rules</h2>
+          <p data-i18n="rulesIntro">
+            To protect the calm group dynamic, we only accept dogs that fit our environment.
+          </p>
+          <div class="card">
+            <ul>
+              <li data-i18n="rules1">No aggressive dogs</li>
+              <li data-i18n="rules2">No severe anxiety cases without prior experience support</li>
+              <li data-i18n="rules3">Vaccinations must be up to date</li>
+              <li data-i18n="rules4">No conflict-prone males in group settings</li>
+              <li data-i18n="rules5">Dogs must be able to stay indoors calmly</li>
+            </ul>
+            <p data-i18n="rulesOutro">
+              Clear expectations from the start help every dog enjoy a safe, relaxed day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container card contact-card">
+          <h2 data-i18n="contactTitle">Book a trial day</h2>
+          <p data-i18n="contactText">
+            Tell us about your dog and we will confirm if Hygge Paws is the right calm fit.
+          </p>
+          <a class="cta" href="mailto:hello@hyggepaws.dk" data-i18n="contactCta">Contact Hygge Paws</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p data-i18n="footerText">Hygge Paws · Calm, transparent, and premium small-group dog care in Copenhagen.</p>
+      </div>
+    </footer>
+  </body>
+</html>
