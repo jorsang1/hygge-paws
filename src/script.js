@@ -202,7 +202,7 @@ const detectBrowserLanguage = () => {
   ];
 
   for (const locale of candidates) {
-    const code = String(locale).toLowerCase().split(/[-_]/)[0];
+    const code = locale.toLowerCase().split(/[-_]/)[0];
     if (["da", "es"].includes(code)) return code;
   }
 
