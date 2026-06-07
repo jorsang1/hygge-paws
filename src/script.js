@@ -1,5 +1,11 @@
 const dictionary = {
   en: {
+    pageTitle: "Hygge Paws | Calm Dog Daycare in Copenhagen",
+    pageDescription:
+      "Hygge Paws is a calm, home-style dog daycare with small groups, long walks, rest time, and personalized care in Copenhagen.",
+    ogTitle: "Hygge Paws | Calm Dog Daycare in Copenhagen",
+    ogDescription:
+      "Small-group, calm dog daycare with personalized care, clear rules, and a hygge atmosphere.",
     skipToContent: "Skip to main content",
     heroTitle: "Calm daycare for happy dogs",
     heroSubtitle:
@@ -64,6 +70,12 @@ const dictionary = {
       "Hygge Paws · Calm, transparent, and premium small-group dog care in Copenhagen."
   },
   da: {
+    pageTitle: "Hygge Paws | Rolig hundepasning i København",
+    pageDescription:
+      "Hygge Paws er en rolig hundepasning i hjemlige rammer med små grupper, lange gåture, hvile og personlig omsorg i København.",
+    ogTitle: "Hygge Paws | Rolig hundepasning i København",
+    ogDescription:
+      "Rolig hundepasning i små grupper med personlig omsorg, klare rammer og hygge-atmosfære.",
     skipToContent: "Spring til hovedindhold",
     heroTitle: "Rolig hundepasning til glade hunde",
     heroSubtitle:
@@ -128,6 +140,12 @@ const dictionary = {
       "Hygge Paws · Rolig, transparent og premium hundepasning i små grupper i København."
   },
   es: {
+    pageTitle: "Hygge Paws | Guardería canina calmada en Copenhague",
+    pageDescription:
+      "Hygge Paws es una guardería canina calmada, estilo hogar, con grupos pequeños, paseos largos, descanso y atención personalizada en Copenhague.",
+    ogTitle: "Hygge Paws | Guardería canina calmada en Copenhague",
+    ogDescription:
+      "Guardería canina calmada en grupos pequeños con atención personalizada, reglas claras y ambiente hygge.",
     skipToContent: "Saltar al contenido principal",
     heroTitle: "Guardería calmada para perros felices",
     heroSubtitle:
@@ -194,6 +212,11 @@ const dictionary = {
 };
 
 const select = document.getElementById("language");
+const languageUrls = {
+  en: "/",
+  da: "/da/",
+  es: "/es/"
+};
 
 const detectBrowserLanguage = () => {
   const candidates = [
@@ -209,6 +232,21 @@ const detectBrowserLanguage = () => {
   return "en";
 };
 
+const detectLanguageFromPath = () => {
+  const path = window.location.pathname.toLowerCase();
+  if (path === "/da" || path.startsWith("/da/")) return "da";
+  if (path === "/es" || path.startsWith("/es/")) return "es";
+  return "en";
+};
+
+const redirectToLanguage = (lang) => {
+  const selectedLang = dictionary[lang] ? lang : "en";
+  const target = languageUrls[selectedLang];
+  const hash = window.location.hash || "";
+  const search = window.location.search || "";
+  window.location.assign(`${target}${search}${hash}`);
+};
+
 const applyLanguage = (lang) => {
   const selectedLang = dictionary[lang] ? lang : "en";
   const translations = dictionary[selectedLang];
@@ -221,15 +259,43 @@ const applyLanguage = (lang) => {
     }
   });
 
-  select.value = selectedLang;
+  document.title = translations.pageTitle;
+  const descriptionMeta = document.querySelector('meta[name="description"]');
+  const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+  const ogDescriptionMeta = document.querySelector(
+    'meta[property="og:description"]'
+  );
+  if (descriptionMeta) descriptionMeta.setAttribute("content", translations.pageDescription);
+  if (ogTitleMeta) ogTitleMeta.setAttribute("content", translations.ogTitle);
+  if (ogDescriptionMeta) ogDescriptionMeta.setAttribute("content", translations.ogDescription);
+
+  if (select) select.value = selectedLang;
   localStorage.setItem("hygge-paws-language", selectedLang);
 };
 
 const initializeLanguage = () => {
+  const currentLanguage = detectLanguageFromPath();
   const storedLang = localStorage.getItem("hygge-paws-language");
   const preferred = storedLang || detectBrowserLanguage();
-  applyLanguage(preferred);
+  const shouldRedirectFromRoot =
+    currentLanguage === "en" &&
+    window.location.pathname === "/" &&
+    preferred !== "en";
+
+  if (shouldRedirectFromRoot) {
+    redirectToLanguage(preferred);
+    return;
+  }
+
+  applyLanguage(currentLanguage);
 };
 
-select.addEventListener("change", (event) => applyLanguage(event.target.value));
+if (select) {
+  select.addEventListener("change", (event) => {
+    const selectedLanguage = event.target.value;
+    localStorage.setItem("hygge-paws-language", selectedLanguage);
+    redirectToLanguage(selectedLanguage);
+  });
+}
+
 initializeLanguage();
