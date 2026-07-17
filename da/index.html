@@ -8,7 +8,7 @@
       name="description"
       content="Hygge Paws er en rolig hundepasning i hjemlige rammer med små grupper, lange gåture, hvile og personlig omsorg i København."
     />
-    <meta name="theme-color" content="#7d9076" />
+    <meta name="theme-color" content="#3d5438" />
     <meta property="og:title" content="Hygge Paws | Rolig hundepasning i København" />
     <meta
       property="og:description"
@@ -20,166 +20,265 @@
     <link rel="alternate" hreflang="da" href="https://hyggepaws.dk/da/" />
     <link rel="alternate" hreflang="es" href="https://hyggepaws.dk/es/" />
     <link rel="alternate" hreflang="x-default" href="https://hyggepaws.dk/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles.css" />
     <script src="../script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="skipToContent">Skip to main content</a>
+    <a class="skip-link" href="#main" data-i18n="skipToContent">Spring til hovedindhold</a>
 
-    <header class="site-header">
-      <div class="container header-grid">
-        <div>
-          <p class="eyebrow">Hygge Paws</p>
-          <h1 data-i18n="heroTitle">Calm daycare for happy dogs</h1>
-          <p data-i18n="heroSubtitle">
-            Small groups, long walks, rest, and personal attention in a warm home atmosphere.
-          </p>
+    <!-- Sticky navigation -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="/da/" class="brand">
+          <span class="brand-name">Hygge Paws</span>
+          <span class="brand-location">Copenhagen</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#concept" data-i18n="navConcept">Koncept</a>
+          <a href="#schedule" data-i18n="navSchedule">Tidsplan</a>
+          <a href="#pricing" data-i18n="navPricing">Priser</a>
+          <a href="#rules" data-i18n="navRules">Regler</a>
+          <a href="#contact" data-i18n="navContact">Kontakt</a>
+        </nav>
+
+        <div class="header-actions">
+          <form class="language-switcher" aria-label="Language switcher">
+            <label for="language" class="sr-only" data-i18n="languageLabel">Sprog</label>
+            <select id="language" name="language">
+              <option value="en">EN</option>
+              <option value="da">DA</option>
+              <option value="es">ES</option>
+            </select>
+          </form>
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <form class="language-switcher" aria-label="Language switcher">
-          <label for="language" data-i18n="languageLabel">Language</label>
-          <select id="language" name="language">
-            <option value="en">English</option>
-            <option value="da">Dansk</option>
-            <option value="es">Español</option>
-          </select>
-        </form>
       </div>
-      <nav class="site-nav" aria-label="Primary">
-        <div class="container nav-links">
-          <a href="#concept" data-i18n="navConcept">Concept</a>
-          <a href="#schedule" data-i18n="navSchedule">Schedule</a>
-          <a href="#pricing" data-i18n="navPricing">Pricing</a>
-          <a href="#rules" data-i18n="navRules">Rules</a>
-          <a href="#contact" data-i18n="navContact">Contact</a>
-        </div>
-      </nav>
     </header>
 
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Hygge Paws · Copenhagen</p>
+        <h1 id="hero-title" data-i18n="heroTitle">Rolig hundepasning til glade hunde</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Små grupper, lange ture, hvile og personlig omsorg i en varm hjemlig atmosfære.
+        </p>
+        <a class="cta" href="#contact" data-i18n="contactCta">Kontakt Hygge Paws</a>
+      </div>
+    </section>
+
+    <!-- Feature bar -->
+    <div class="feature-bar" aria-hidden="true">
+      <div class="container feature-bar-inner">
+        <span class="feature-item">
+          <span class="feature-item-icon">🐾</span>
+          <span data-i18n="featureGroups">Små grupper</span>
+        </span>
+        <span class="feature-item">
+          <span class="feature-item-icon">🌿</span>
+          <span data-i18n="featureWalks">Naturture</span>
+        </span>
+        <span class="feature-item">
+          <span class="feature-item-icon">🏡</span>
+          <span data-i18n="featureHome">Hjemlig hygge</span>
+        </span>
+        <span class="feature-item">
+          <span class="feature-item-icon">📸</span>
+          <span data-i18n="featurePhotos">Daglige billeder</span>
+        </span>
+      </div>
+    </div>
+
     <main id="main">
+      <!-- Concept -->
       <section class="section" id="concept">
-        <div class="container two-col">
-          <article class="card">
-            <h2 data-i18n="conceptTitle">A calm alternative to big daycare</h2>
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="conceptTitle">Et roligt alternativ til store hundepensioner</h2>
+            <div class="section-divider"></div>
             <p data-i18n="conceptText">
-              We welcome only 3–5 dogs per day to create a peaceful routine with quality care.
+              Vi tager kun 3–5 hunde om dagen for at skabe en tryg og rolig hverdag med høj kvalitet.
             </p>
-            <h3 data-i18n="conceptNoTitle">Not our style</h3>
-            <ul>
-              <li data-i18n="conceptNo1">Mass daycare with too many dogs</li>
-              <li data-i18n="conceptNo2">Loud, stressful environment</li>
-              <li data-i18n="conceptNo3">Chaotic routines</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3 data-i18n="conceptYesTitle">What dogs get at Hygge Paws</h3>
-            <ul>
-              <li data-i18n="conceptYes1">Small groups (max 3–5 dogs)</li>
-              <li data-i18n="conceptYes2">Long outdoor time and nature walks</li>
-              <li data-i18n="conceptYes3">Rest, calm cuddles, and indoor comfort</li>
-              <li data-i18n="conceptYes4">Clear communication and daily photos</li>
-            </ul>
-            <p data-i18n="conceptExtra">
-              Ideal for sensitive, senior, or calm dogs that thrive in low-stress spaces.
-            </p>
-          </article>
+          </div>
+
+          <div class="concept-split">
+            <div class="concept-col no">
+              <h3 data-i18n="conceptNoTitle">Ikke vores stil</h3>
+              <ul>
+                <li data-i18n="conceptNo1">Massepasning med for mange hunde</li>
+                <li data-i18n="conceptNo2">Højt og stressende miljø</li>
+                <li data-i18n="conceptNo3">Kaotiske rutiner</li>
+              </ul>
+            </div>
+            <div class="concept-col yes">
+              <h3 data-i18n="conceptYesTitle">Hvad hunde får hos Hygge Paws</h3>
+              <ul>
+                <li data-i18n="conceptYes1">Små grupper (maks. 3–5 hunde)</li>
+                <li data-i18n="conceptYes2">Lang tid ude og gåture i naturen</li>
+                <li data-i18n="conceptYes3">Hvile, rolige kram og komfort indendørs</li>
+                <li data-i18n="conceptYes4">Tydelig kommunikation og daglige billeder</li>
+              </ul>
+              <p class="concept-note" data-i18n="conceptExtra">
+                Ideelt for sensitive, ældre eller rolige hunde, som trives i et miljø med lavt stressniveau.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section alt" id="schedule">
+      <!-- Schedule -->
+      <section class="section section-alt" id="schedule">
         <div class="container">
-          <h2 data-i18n="scheduleTitle">Daily schedule</h2>
-          <p><strong data-i18n="scheduleHoursLabel">Opening hours:</strong> <span data-i18n="scheduleHoursValue">09:00–16:00</span></p>
-          <div class="two-col">
-            <article class="card">
-              <h3 data-i18n="summerTitle">Summer routine</h3>
-              <ul>
-                <li data-i18n="summer1">09:00–10:00 · Arrival</li>
-                <li data-i18n="summer2">10:00–12:00 · Outdoor time</li>
-                <li data-i18n="summer3">12:00–14:00 · Eat, rest, calm & cuddles</li>
-                <li data-i18n="summer4">14:00–15:00 · Short walk</li>
-                <li data-i18n="summer5">15:00–16:00 · Pick-up prep</li>
-              </ul>
+          <div class="section-header">
+            <h2 data-i18n="scheduleTitle">Dagsplan</h2>
+            <div class="section-divider"></div>
+            <p>
+              <strong data-i18n="scheduleHoursLabel">Åbningstider:</strong>
+              <span data-i18n="scheduleHoursValue"> 09:00–16:00</span>
+            </p>
+          </div>
+          <div class="schedule-grid">
+            <article class="schedule-card">
+              <div class="schedule-card-header">
+                <h3 data-i18n="summerTitle">Sommerrutine</h3>
+              </div>
+              <div class="schedule-card-body">
+                <ul>
+                  <li data-i18n="summer1">09:00–10:00 · Modtagelse</li>
+                  <li data-i18n="summer2">10:00–12:00 · Udetid</li>
+                  <li data-i18n="summer3">12:00–14:00 · Mad, hvile, ro og kram</li>
+                  <li data-i18n="summer4">14:00–15:00 · Kort gåtur</li>
+                  <li data-i18n="summer5">15:00–16:00 · Klar til afhentning</li>
+                </ul>
+              </div>
             </article>
-            <article class="card">
-              <h3 data-i18n="winterTitle">Winter routine</h3>
-              <ul>
-                <li data-i18n="winter1">09:00–10:00 · Arrival</li>
-                <li data-i18n="winter2">10:00–11:00 · Outdoor time</li>
-                <li data-i18n="winter3">11:00–14:00 · Eat, rest, calm & cuddles</li>
-                <li data-i18n="winter4">14:00–15:00 · Short walk</li>
-                <li data-i18n="winter5">15:00–16:00 · Pick-up prep</li>
-              </ul>
+            <article class="schedule-card">
+              <div class="schedule-card-header">
+                <h3 data-i18n="winterTitle">Vinterrutine</h3>
+              </div>
+              <div class="schedule-card-body">
+                <ul>
+                  <li data-i18n="winter1">09:00–10:00 · Modtagelse</li>
+                  <li data-i18n="winter2">10:00–11:00 · Udetid</li>
+                  <li data-i18n="winter3">11:00–14:00 · Mad, hvile, ro og kram</li>
+                  <li data-i18n="winter4">14:00–15:00 · Kort gåtur</li>
+                  <li data-i18n="winter5">15:00–16:00 · Klar til afhentning</li>
+                </ul>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- Pricing -->
       <section class="section" id="pricing">
         <div class="container">
-          <h2 data-i18n="pricingTitle">Simple pricing</h2>
-          <div class="card">
-            <table>
-              <caption class="sr-only" data-i18n="pricingCaption">Hygge Paws pricing table</caption>
-              <thead>
-                <tr>
-                  <th scope="col" data-i18n="pricingService">Service</th>
-                  <th scope="col" data-i18n="pricingPrice">Price (DKK)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="pricingDay">Full day (09:00–16:00)</td>
-                  <td>260</td>
-                </tr>
-                <tr>
-                  <td data-i18n="pricingHalf">Half day (09:00–13:00 or 12:00–16:00)</td>
-                  <td>160</td>
-                </tr>
-                <tr>
-                  <td data-i18n="pricingHourly">Single hours</td>
-                  <td>50</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="section-header">
+            <h2 data-i18n="pricingTitle">Enkle priser</h2>
+            <div class="section-divider"></div>
           </div>
+          <div class="pricing-grid">
+            <div class="pricing-card featured">
+              <div class="pricing-amount">260</div>
+              <div class="pricing-currency">DKK</div>
+              <div class="pricing-desc" data-i18n="pricingDay">Hel dag (09:00–16:00)</div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-amount">160</div>
+              <div class="pricing-currency">DKK</div>
+              <div class="pricing-desc" data-i18n="pricingHalf">Halv dag (09:00–13:00 eller 12:00–16:00)</div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-amount">50</div>
+              <div class="pricing-currency">DKK</div>
+              <div class="pricing-desc" data-i18n="pricingHourly">Enkelte timer</div>
+            </div>
+          </div>
+
+          <table class="pricing-table-fallback" aria-label="Pristabel">
+            <caption class="sr-only" data-i18n="pricingCaption">Pristabel for Hygge Paws</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="pricingService">Ydelse</th>
+                <th scope="col" data-i18n="pricingPrice">Pris (DKK)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="pricingDay">Hel dag (09:00–16:00)</td>
+                <td>260</td>
+              </tr>
+              <tr>
+                <td data-i18n="pricingHalf">Halv dag (09:00–13:00 eller 12:00–16:00)</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td data-i18n="pricingHourly">Enkelte timer</td>
+                <td>50</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
-      <section class="section alt" id="rules">
+      <!-- Rules -->
+      <section class="section section-green" id="rules">
         <div class="container">
-          <h2 data-i18n="rulesTitle">Important admission rules</h2>
-          <p data-i18n="rulesIntro">
-            To protect the calm group dynamic, we only accept dogs that fit our environment.
-          </p>
-          <div class="card">
-            <ul>
-              <li data-i18n="rules1">No aggressive dogs</li>
-              <li data-i18n="rules2">No severe anxiety cases without prior experience support</li>
-              <li data-i18n="rules3">Vaccinations must be up to date</li>
-              <li data-i18n="rules4">No conflict-prone males in group settings</li>
-              <li data-i18n="rules5">Dogs must be able to stay indoors calmly</li>
-            </ul>
-            <p data-i18n="rulesOutro">
-              Clear expectations from the start help every dog enjoy a safe, relaxed day.
+          <div class="section-header">
+            <h2 data-i18n="rulesTitle">Vigtige optagelsesregler</h2>
+            <div class="section-divider"></div>
+            <p data-i18n="rulesIntro">
+              For at beskytte den rolige gruppedynamik accepterer vi kun hunde, der passer til miljøet.
             </p>
           </div>
+          <ul class="rules-list">
+            <li data-i18n="rules1">Ingen aggressive hunde</li>
+            <li data-i18n="rules2">Ingen alvorlig angst uden tidligere støtteerfaring</li>
+            <li data-i18n="rules3">Vaccinationer skal være opdaterede</li>
+            <li data-i18n="rules4">Ingen konfliktsøgende hanhunde i grupper</li>
+            <li data-i18n="rules5">Hunde skal kunne være rolige indendørs</li>
+          </ul>
+          <p class="rules-note" data-i18n="rulesOutro">
+            Klare forventninger fra starten hjælper alle hunde til en tryg og afslappet dag.
+          </p>
         </div>
       </section>
 
-      <section class="section" id="contact">
-        <div class="container card contact-card">
-          <h2 data-i18n="contactTitle">Book a trial day</h2>
+      <!-- Contact -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <h2 data-i18n="contactTitle">Book en prøvedag</h2>
           <p data-i18n="contactText">
-            Tell us about your dog and we will confirm if Hygge Paws is the right calm fit.
+            Fortæl os om din hund, så bekræfter vi, om Hygge Paws er det rette rolige match.
           </p>
-          <a class="cta" href="mailto:hello@hyggepaws.dk" data-i18n="contactCta">Contact Hygge Paws</a>
+          <a class="cta" href="mailto:hello@hyggepaws.dk" data-i18n="contactCta">Kontakt Hygge Paws</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p data-i18n="footerText">Hygge Paws · Calm, transparent, and premium small-group dog care in Copenhagen.</p>
+        <span class="footer-brand">Hygge Paws</span>
+        <p data-i18n="footerText">
+          Hygge Paws · Rolig, transparent og premium hundepasning i små grupper i København.
+        </p>
       </div>
     </footer>
   </body>

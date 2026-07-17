@@ -16,6 +16,10 @@ const dictionary = {
     navPricing: "Pricing",
     navRules: "Rules",
     navContact: "Contact",
+    featureGroups: "Small Groups",
+    featureWalks: "Nature Walks",
+    featureHome: "Home Comfort",
+    featurePhotos: "Daily Photos",
     conceptTitle: "A calm alternative to big daycare",
     conceptText:
       "We welcome only 3–5 dogs per day to create a peaceful routine with quality care.",
@@ -86,6 +90,10 @@ const dictionary = {
     navPricing: "Priser",
     navRules: "Regler",
     navContact: "Kontakt",
+    featureGroups: "Små grupper",
+    featureWalks: "Naturture",
+    featureHome: "Hjemlig hygge",
+    featurePhotos: "Daglige billeder",
     conceptTitle: "Et roligt alternativ til store hundepensioner",
     conceptText:
       "Vi tager kun 3–5 hunde om dagen for at skabe en tryg og rolig hverdag med høj kvalitet.",
@@ -156,6 +164,10 @@ const dictionary = {
     navPricing: "Precios",
     navRules: "Normas",
     navContact: "Contacto",
+    featureGroups: "Grupos pequeños",
+    featureWalks: "Paseos por naturaleza",
+    featureHome: "Ambiente hogareño",
+    featurePhotos: "Fotos diarias",
     conceptTitle: "Una alternativa tranquila a las guarderías grandes",
     conceptText:
       "Recibimos solo 3–5 perros al día para mantener una rutina calmada y de calidad.",
@@ -295,6 +307,35 @@ if (select) {
     const selectedLanguage = event.target.value;
     localStorage.setItem("hygge-paws-language", selectedLanguage);
     redirectToLanguage(selectedLanguage);
+  });
+}
+
+// Sticky header scroll effect
+const siteHeader = document.getElementById("site-header");
+if (siteHeader) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      siteHeader.classList.toggle("scrolled", window.scrollY > 20);
+    },
+    { passive: true }
+  );
+}
+
+// Mobile navigation toggle
+const navToggle = document.getElementById("nav-toggle");
+const siteNav = document.getElementById("site-nav");
+if (navToggle && siteNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
   });
 }
 
