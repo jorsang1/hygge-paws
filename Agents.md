@@ -12,5 +12,3 @@ If the browser is set to Danish or Spanish, the website should automatically dis
 Make sure to include a language switcher on the website that allows users to manually switch between languages as well.
 
 Use semantic HTML elements to structure the content of the website, and ensure that it is accessible to all users, including those with disabilities.
-
-Use the design and color scheme similar to what is available in 'docs/design/' to create a cohesive and visually appealing website that reflects the brand's identity.

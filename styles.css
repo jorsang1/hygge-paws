@@ -166,7 +166,7 @@ img {
 
 /* Solid header: dark text */
 .site-header.solid .brand-name {
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
 }
 
 .site-header.solid .brand-location {
@@ -204,7 +204,7 @@ img {
 }
 
 .site-header.solid .site-nav a:hover {
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
 }
 
 .header-actions {
@@ -281,7 +281,7 @@ img {
   align-items: flex-end;
   justify-content: flex-start;
   overflow: hidden;
-  background-color: var(--sage-dark);
+  background-color: rgb(5, 163, 155);
 }
 
 .hero-bg {
@@ -372,7 +372,7 @@ img {
 /* ── Feature strip ─────────────────────────── */
 
 .feature-bar {
-  background: var(--sage-dark);
+  background: rgb(5, 163, 155);
 }
 
 .feature-bar-inner {
@@ -429,7 +429,7 @@ img {
 }
 
 .section-dark {
-  background: var(--sage-dark);
+  background: rgb(5, 163, 155);
 }
 
 .section-header {
@@ -439,7 +439,7 @@ img {
 
 .section-header h2 {
   font-style: italic;
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
 }
 
 .section-header p {
@@ -485,7 +485,7 @@ img {
 }
 
 .about-text h2 {
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
   font-style: italic;
   margin-bottom: 1.5rem;
 }
@@ -525,7 +525,7 @@ img {
   font-style: italic;
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
   margin-bottom: 1rem;
   padding-bottom: 0.7rem;
   border-bottom: 1px solid var(--sand);
@@ -564,7 +564,7 @@ img {
   background: var(--sage-pale);
   border-left: 3px solid var(--sage);
   font-size: 0.95rem;
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
   font-style: italic;
   line-height: 1.7;
   font-family: var(--font-display);
@@ -743,7 +743,7 @@ img {
 
 .step h3 {
   font-style: italic;
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
 }
@@ -784,7 +784,7 @@ img {
   border: 1px solid var(--sage);
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
   font-weight: 500;
 }
 
@@ -801,7 +801,7 @@ img {
 }
 
 .schedule-card-header {
-  background: var(--sage-dark);
+  background: rgb(5, 163, 155);
   padding: 1.3rem 1.8rem;
 }
 
@@ -872,8 +872,8 @@ img {
 }
 
 .pricing-card.featured {
-  background: var(--sage-dark);
-  border-color: var(--sage-dark);
+  background: rgb(5, 163, 155);
+  border-color: rgb(5, 163, 155);
 }
 
 .pricing-amount {
@@ -885,7 +885,7 @@ img {
 }
 
 .pricing-card:not(.featured) .pricing-amount {
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
 }
 
 .pricing-card.featured .pricing-amount {
@@ -976,7 +976,7 @@ img {
   text-align: center;
   margin-top: 2.5rem;
   font-style: italic;
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 300;
@@ -986,7 +986,7 @@ img {
 /* ── Location & Contact ────────────────────── */
 
 .contact-section {
-  background: var(--sage-dark);
+  background: rgb(5, 163, 155);
   color: var(--white);
   padding: var(--section-pad) 0;
 }
@@ -1086,16 +1086,16 @@ a.contact-item-value:hover {
 
 .cta:hover {
   background: var(--white);
-  color: var(--sage-dark);
+  color: rgb(5, 163, 155);
 }
 
 .cta-dark {
-  color: var(--sage-dark);
-  border-color: var(--sage-dark);
+  color: rgb(5, 163, 155);
+  border-color: rgb(5, 163, 155);
 }
 
 .cta-dark:hover {
-  background: var(--sage-dark);
+  background: rgb(5, 163, 155);
   color: var(--white);
 }
 
