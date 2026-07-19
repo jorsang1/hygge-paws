@@ -8,7 +8,7 @@
       name="description"
       content="Hygge Paws es una guardería canina calmada, estilo hogar, con grupos pequeños, paseos largos, descanso y atención personalizada en Copenhague."
     />
-    <meta name="theme-color" content="#3d5438" />
+    <meta name="theme-color" content="#2e4428" />
     <meta property="og:title" content="Hygge Paws | Guardería canina calmada en Copenhague" />
     <meta
       property="og:description"
@@ -32,16 +32,17 @@
   <body>
     <a class="skip-link" href="#main" data-i18n="skipToContent">Saltar al contenido principal</a>
 
-    <!-- Sticky navigation -->
-    <header class="site-header" id="site-header">
+    <!-- Navigation -->
+    <header class="site-header transparent" id="site-header">
       <div class="container header-inner">
         <a href="/es/" class="brand">
           <span class="brand-name">Hygge Paws</span>
           <span class="brand-location">Copenhagen</span>
         </a>
 
-        <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
           <a href="#concept" data-i18n="navConcept">Concepto</a>
+          <a href="#gallery" data-i18n="navGallery">Galería</a>
           <a href="#schedule" data-i18n="navSchedule">Horario</a>
           <a href="#pricing" data-i18n="navPricing">Precios</a>
           <a href="#rules" data-i18n="navRules">Normas</a>
@@ -49,7 +50,7 @@
         </nav>
 
         <div class="header-actions">
-          <form class="language-switcher" aria-label="Language switcher">
+          <form class="language-switcher" aria-label="Selector de idioma">
             <label for="language" class="sr-only" data-i18n="languageLabel">Idioma</label>
             <select id="language" name="language">
               <option value="en">EN</option>
@@ -60,7 +61,7 @@
           <button
             class="nav-toggle"
             id="nav-toggle"
-            aria-label="Toggle menu"
+            aria-label="Abrir menú"
             aria-expanded="false"
             aria-controls="site-nav"
           >
@@ -74,13 +75,18 @@
 
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" id="hero-bg"></div>
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">Hygge Paws · Copenhagen</p>
-        <h1 id="hero-title" data-i18n="heroTitle">Guardería calmada para perros felices</h1>
+        <p class="eyebrow">Hygge Paws · Copenhague</p>
+        <h1 id="hero-title" data-i18n="heroTitle">Guardería calmada<br><em>para perros felices</em></h1>
         <p class="hero-subtitle" data-i18n="heroSubtitle">
           Grupos pequeños, paseos largos, descanso y atención personalizada en un ambiente hogareño.
         </p>
-        <a class="cta" href="#contact" data-i18n="contactCta">Contactar a Hygge Paws</a>
+        <a class="cta" href="#contact" data-i18n="heroCtaBook">Reserva un día de prueba</a>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span data-i18n="heroScroll">Scroll</span>
       </div>
     </section>
 
@@ -107,52 +113,148 @@
     </div>
 
     <main id="main">
-      <!-- Concept -->
-      <section class="section" id="concept">
-        <div class="container">
-          <div class="section-header">
-            <h2 data-i18n="conceptTitle">Una alternativa tranquila a las guarderías grandes</h2>
-            <div class="section-divider"></div>
+
+      <!-- Concept / About -->
+      <section class="section" id="concept" aria-labelledby="concept-title">
+        <div class="about-split">
+          <div class="about-text">
+            <p class="section-eyebrow" data-i18n="conceptEyebrow">Nuestra filosofía</p>
+            <h2 id="concept-title" data-i18n="conceptTitle">Una alternativa tranquila a las guarderías grandes</h2>
             <p data-i18n="conceptText">
               Recibimos solo 3–5 perros al día para mantener una rutina calmada y de calidad.
             </p>
+            <p data-i18n="conceptExtra">
+              Ideal para perros sensibles, senior o tranquilos que se benefician de espacios sin estrés.
+            </p>
+
+            <div class="concept-values">
+              <div class="concept-col no">
+                <h3 data-i18n="conceptNoTitle">No es nuestro estilo</h3>
+                <ul>
+                  <li data-i18n="conceptNo1">Guardería masiva con demasiados perros</li>
+                  <li data-i18n="conceptNo2">Ambiente ruidoso y estresante</li>
+                  <li data-i18n="conceptNo3">Rutinas caóticas</li>
+                  <li data-i18n="conceptNo4">Métodos aversivos</li>
+                </ul>
+              </div>
+              <div class="concept-col yes">
+                <h3 data-i18n="conceptYesTitle">Lo que reciben en Hygge Paws</h3>
+                <ul>
+                  <li data-i18n="conceptYes1">Grupos pequeños (máx. 3–5 perros)</li>
+                  <li data-i18n="conceptYes2">Mucho tiempo al aire libre y paseos por naturaleza</li>
+                  <li data-i18n="conceptYes3">Descanso, calma y mimos en interior</li>
+                  <li data-i18n="conceptYes4">Comunicación clara y fotos diarias</li>
+                </ul>
+              </div>
+            </div>
+            <blockquote class="concept-note" data-i18n="conceptQuote">
+              Un entorno acogedor y seguro donde tu perro puede relajarse, jugar y disfrutar del día mientras tú estás en el trabajo.
+            </blockquote>
+          </div>
+          <div class="about-image">
+            <img
+              src="../assets/frontcover-dog-paw-and-hand.jpg"
+              alt="Una mano sosteniendo suavemente la pata de un perro"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-eyebrow" data-i18n="galleryEyebrow">Nuestros días</p>
+            <h2 id="gallery-title" data-i18n="galleryTitle">La vida en Hygge Paws</h2>
+            <div class="section-divider"></div>
+            <p data-i18n="galleryText">Cada día está lleno de paseos, descanso, juego y mucho amor.</p>
           </div>
 
-          <div class="concept-split">
-            <div class="concept-col no">
-              <h3 data-i18n="conceptNoTitle">No es nuestro estilo</h3>
-              <ul>
-                <li data-i18n="conceptNo1">Guardería masiva con demasiados perros</li>
-                <li data-i18n="conceptNo2">Ambiente ruidoso y estresante</li>
-                <li data-i18n="conceptNo3">Rutinas caóticas</li>
-              </ul>
+          <div class="gallery-grid">
+            <div class="gallery-item wide" data-index="0">
+              <img src="../gallery/hyggepaws-walk-balder-maite-canals.jpg" alt="Paseo con los perros por los canales de Copenhague" loading="lazy" />
             </div>
-            <div class="concept-col yes">
-              <h3 data-i18n="conceptYesTitle">Lo que reciben en Hygge Paws</h3>
-              <ul>
-                <li data-i18n="conceptYes1">Grupos pequeños (máx. 3–5 perros)</li>
-                <li data-i18n="conceptYes2">Mucho tiempo al aire libre y paseos por naturaleza</li>
-                <li data-i18n="conceptYes3">Descanso, calma y mimos en interior</li>
-                <li data-i18n="conceptYes4">Comunicación clara y fotos diarias</li>
-              </ul>
-              <p class="concept-note" data-i18n="conceptExtra">
-                Ideal para perros sensibles, senior o tranquilos que se benefician de espacios sin estrés.
-              </p>
+            <div class="gallery-item" data-index="1">
+              <img src="../gallery/hyggepaws-kiss-balder-maite.jpg" alt="La cuidadora dando un beso a Balder" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="2">
+              <img src="../gallery/hyggepaws-treat-balder-maite.jpg" alt="Dando una golosina a Balder" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="3">
+              <img src="../gallery/hyggepaws-walk-balder-maite-smiling.jpg" alt="Paseo feliz con Balder y Maite" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="4">
+              <img src="../gallery/hyggepaws-play-cookie-uxue.jpeg" alt="Cookie y Uxue jugando juntos" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="5">
+              <img src="../gallery/hyggepaws-walk-balder-maite.jpg" alt="Paseo nocturno con los perros" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="6">
+              <img src="../gallery/hyggepaws-sleep-cookie.jpeg" alt="Cookie descansando tranquilamente" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="7">
+              <img src="../gallery/hyggepaws-sleep-balder.jpg" alt="Balder relajándose en interior" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="8">
+              <img src="../gallery/hyggepaws-cat-meiga.jpeg" alt="Meiga el gato disfrutando del ambiente tranquilo" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">✕</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Imagen anterior">‹</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+        <button class="lightbox-next" id="lightbox-next" aria-label="Imagen siguiente">›</button>
+      </div>
+
+      <!-- How it works -->
+      <section class="section section-alt" id="how" aria-labelledby="how-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-eyebrow" data-i18n="howEyebrow">El proceso</p>
+            <h2 id="how-title" data-i18n="howTitle">Cómo funciona</h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="steps-grid">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3 data-i18n="how1Title">Encuentro inicial</h3>
+              <p data-i18n="how1Text">Tenemos una breve presentación — un paseo o en casa — para conocernos y ver si somos una buena combinación.</p>
+              <div class="step-connector" aria-hidden="true"></div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3 data-i18n="how2Title">Un día tranquilo juntos</h3>
+              <p data-i18n="how2Text">Tu perro disfruta de un día equilibrado con paseos, juego, descanso y mucho amor en un entorno calmado y hogareño.</p>
+              <div class="step-connector" aria-hidden="true"></div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3 data-i18n="how3Title">Actualizaciones y comunicación</h3>
+              <p data-i18n="how3Text">Recibirás fotos y actualizaciones durante el día. Estoy siempre disponible para cualquier pregunta.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Schedule -->
-      <section class="section section-alt" id="schedule">
+      <section class="section section-sand" id="schedule" aria-labelledby="schedule-title">
         <div class="container">
           <div class="section-header">
-            <h2 data-i18n="scheduleTitle">Rutina diaria</h2>
+            <p class="section-eyebrow" data-i18n="scheduleEyebrow">Rutina</p>
+            <h2 id="schedule-title" data-i18n="scheduleTitle">Rutina diaria</h2>
             <div class="section-divider"></div>
-            <p>
+          </div>
+          <div class="schedule-hours">
+            <div class="schedule-hours-badge">
+              <span>🕘</span>
               <strong data-i18n="scheduleHoursLabel">Horario:</strong>
-              <span data-i18n="scheduleHoursValue"> 09:00–16:00</span>
-            </p>
+              <span data-i18n="scheduleHoursValue">09:00–16:00</span>
+            </div>
           </div>
           <div class="schedule-grid">
             <article class="schedule-card">
@@ -165,7 +267,7 @@
                   <li data-i18n="summer2">10:00–12:00 · Actividad exterior</li>
                   <li data-i18n="summer3">12:00–14:00 · Comer, descansar, calma y mimos</li>
                   <li data-i18n="summer4">14:00–15:00 · Paseo corto</li>
-                  <li data-i18n="summer5">15:00–16:00 · Preparación para recoger</li>
+                  <li data-i18n="summer5">15:00–16:00 · Recogida</li>
                 </ul>
               </div>
             </article>
@@ -179,7 +281,7 @@
                   <li data-i18n="winter2">10:00–11:00 · Actividad exterior</li>
                   <li data-i18n="winter3">11:00–14:00 · Comer, descansar, calma y mimos</li>
                   <li data-i18n="winter4">14:00–15:00 · Paseo corto</li>
-                  <li data-i18n="winter5">15:00–16:00 · Preparación para recoger</li>
+                  <li data-i18n="winter5">15:00–16:00 · Recogida</li>
                 </ul>
               </div>
             </article>
@@ -188,10 +290,11 @@
       </section>
 
       <!-- Pricing -->
-      <section class="section" id="pricing">
+      <section class="section" id="pricing" aria-labelledby="pricing-title">
         <div class="container">
           <div class="section-header">
-            <h2 data-i18n="pricingTitle">Precios simples</h2>
+            <p class="section-eyebrow" data-i18n="pricingEyebrow">Tarifas</p>
+            <h2 id="pricing-title" data-i18n="pricingTitle">Precios simples</h2>
             <div class="section-divider"></div>
           </div>
           <div class="pricing-grid">
@@ -211,64 +314,81 @@
               <div class="pricing-desc" data-i18n="pricingHourly">Horas sueltas</div>
             </div>
           </div>
-
           <table class="pricing-table-fallback" aria-label="Tabla de precios">
             <caption class="sr-only" data-i18n="pricingCaption">Tabla de precios de Hygge Paws</caption>
-            <thead>
-              <tr>
-                <th scope="col" data-i18n="pricingService">Servicio</th>
-                <th scope="col" data-i18n="pricingPrice">Precio (DKK)</th>
-              </tr>
-            </thead>
+            <thead><tr><th scope="col" data-i18n="pricingService">Servicio</th><th scope="col" data-i18n="pricingPrice">Precio (DKK)</th></tr></thead>
             <tbody>
-              <tr>
-                <td data-i18n="pricingDay">Día completo (09:00–16:00)</td>
-                <td>260</td>
-              </tr>
-              <tr>
-                <td data-i18n="pricingHalf">Medio día (09:00–13:00 o 12:00–16:00)</td>
-                <td>160</td>
-              </tr>
-              <tr>
-                <td data-i18n="pricingHourly">Horas sueltas</td>
-                <td>50</td>
-              </tr>
+              <tr><td data-i18n="pricingDay">Día completo (09:00–16:00)</td><td>260</td></tr>
+              <tr><td data-i18n="pricingHalf">Medio día (09:00–13:00 o 12:00–16:00)</td><td>160</td></tr>
+              <tr><td data-i18n="pricingHourly">Horas sueltas</td><td>50</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
       <!-- Rules -->
-      <section class="section section-green" id="rules">
+      <section class="section section-sage" id="rules" aria-labelledby="rules-title">
         <div class="container">
           <div class="section-header">
-            <h2 data-i18n="rulesTitle">Normas importantes de admisión</h2>
+            <p class="section-eyebrow" data-i18n="rulesEyebrow">Admisión</p>
+            <h2 id="rules-title" data-i18n="rulesTitle">Normas importantes de admisión</h2>
             <div class="section-divider"></div>
             <p data-i18n="rulesIntro">
               Para proteger la dinámica calmada del grupo, solo aceptamos perros que encajen con este entorno.
             </p>
           </div>
-          <ul class="rules-list">
-            <li data-i18n="rules1">No aceptamos perros agresivos</li>
-            <li data-i18n="rules2">No aceptamos ansiedad severa sin experiencia previa de apoyo</li>
-            <li data-i18n="rules3">Las vacunas deben estar al día</li>
-            <li data-i18n="rules4">No aceptamos machos conflictivos en grupo</li>
-            <li data-i18n="rules5">Los perros deben poder estar tranquilos en interior</li>
-          </ul>
+          <div class="rules-grid" role="list">
+            <div class="rule-item" role="listitem" data-i18n="rules1">No aceptamos perros agresivos</div>
+            <div class="rule-item" role="listitem" data-i18n="rules2">No aceptamos ansiedad severa sin experiencia previa de apoyo</div>
+            <div class="rule-item" role="listitem" data-i18n="rules3">Las vacunas deben estar al día</div>
+            <div class="rule-item" role="listitem" data-i18n="rules4">No aceptamos machos conflictivos en grupo</div>
+            <div class="rule-item" role="listitem" data-i18n="rules5">Los perros deben poder estar tranquilos en interior</div>
+            <div class="rule-item" role="listitem" data-i18n="rules6">El encuentro inicial es obligatorio antes del primer día</div>
+          </div>
           <p class="rules-note" data-i18n="rulesOutro">
             Definir expectativas claras desde el principio ayuda a que todos disfruten un día seguro y relajado.
           </p>
         </div>
       </section>
 
-      <!-- Contact -->
-      <section class="contact-section" id="contact">
+      <!-- Location & Contact -->
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <h2 data-i18n="contactTitle">Reserva un día de prueba</h2>
-          <p data-i18n="contactText">
-            Cuéntanos sobre tu perro y confirmaremos si Hygge Paws es el lugar calmado adecuado.
-          </p>
-          <a class="cta" href="mailto:hello@hyggepaws.dk" data-i18n="contactCta">Contactar a Hygge Paws</a>
+          <div class="contact-inner">
+            <div class="contact-left">
+              <p class="section-eyebrow section-eyebrow-light" data-i18n="contactEyebrow">Encuéntranos</p>
+              <h2 id="contact-title" data-i18n="contactTitle">Reserva un día de prueba</h2>
+              <p data-i18n="contactText">
+                Cuéntanos sobre tu perro y confirmaremos si Hygge Paws es el lugar calmado adecuado.
+              </p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-item-label" data-i18n="contactLabelLocation">Ubicación</span>
+                  <address class="contact-item-value contact-address">
+                    <span data-i18n="contactAddress">Vestre Teglgade 8C, Planta baja</span><br>
+                    <span data-i18n="contactCity">2450 Copenhague</span>
+                  </address>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-item-label" data-i18n="contactLabelPhone">Teléfono</span>
+                  <a class="contact-item-value" href="tel:+4550343031">+45 50 34 30 31</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-item-label" data-i18n="contactLabelEmail">Correo</span>
+                  <a class="contact-item-value" href="mailto:info@hyggepaws.dk">info@hyggepaws.dk</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-item-label">Instagram</span>
+                  <a class="contact-item-value" href="https://instagram.com/hyggepaws.dogschool" target="_blank" rel="noopener">@hyggepaws.dogschool</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-right">
+              <h3 data-i18n="contactCTATitle">¿Listo para conocernos?</h3>
+              <p data-i18n="contactCTAText">Plazas limitadas. Escríbenos para empezar la conversación.</p>
+              <a class="cta" href="mailto:info@hyggepaws.dk" data-i18n="contactCta">Contactar a Hygge Paws</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -276,9 +396,14 @@
     <footer class="site-footer">
       <div class="container">
         <span class="footer-brand">Hygge Paws</span>
-        <p data-i18n="footerText">
+        <p class="footer-text" data-i18n="footerText">
           Hygge Paws · Cuidado canino calmado, transparente y premium en grupos pequeños en Copenhague.
         </p>
+        <div class="footer-links">
+          <a href="mailto:info@hyggepaws.dk">info@hyggepaws.dk</a>
+          <a href="tel:+4550343031">+45 50 34 30 31</a>
+          <a href="https://instagram.com/hyggepaws.dogschool" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
     </footer>
   </body>
