@@ -369,7 +369,14 @@ const applyLanguage = (lang) => {
     if (translations[key] !== undefined) {
       if (element.tagName === "H1" && translations[key].includes("\n")) {
         const parts = translations[key].split("\n");
-        element.innerHTML = parts[0] + "<br><em>" + parts[1] + "</em>";
+        element.textContent = "";
+        const textNode = document.createTextNode(parts[0]);
+        const br = document.createElement("br");
+        const em = document.createElement("em");
+        em.textContent = parts[1];
+        element.appendChild(textNode);
+        element.appendChild(br);
+        element.appendChild(em);
       } else {
         element.textContent = translations[key];
       }
@@ -478,12 +485,16 @@ if (navToggle && siteNav) {
     lightboxImg.alt = alt;
     lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
+    const mainContent = document.getElementById("main");
+    if (mainContent) mainContent.setAttribute("aria-hidden", "true");
     lightboxClose.focus();
   };
 
   const closeLightbox = () => {
     lightbox.classList.remove("open");
     document.body.style.overflow = "";
+    const mainContent = document.getElementById("main");
+    if (mainContent) mainContent.removeAttribute("aria-hidden");
   };
 
   const showPrev = () => {

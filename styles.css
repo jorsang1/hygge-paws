@@ -1282,3 +1282,13 @@ select:focus-visible {
     padding: 2rem 1.5rem;
   }
 }
+
+/* ── Helper overrides ──────────────────────── */
+
+.section-eyebrow-light {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-address {
+  font-style: normal;
+}
