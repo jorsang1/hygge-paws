@@ -67,10 +67,10 @@ This document lists the inconsistencies found between the current website conten
 
 | Source | Value |
 |---|---|
-| Website (original) | hello@hyggepaws.dk |
-| All brochures | **info@hyggepaws.dk** |
+| Website (original) | info@hyggepaws.com |
+| All brochures | **info@hyggepaws.com** |
 
-**Issue:** The website used `hello@hyggepaws.dk`, while all brochures list `info@hyggepaws.dk`. The redesign has been updated to use `info@hyggepaws.dk` to match the brochures.
+**Issue:** The website previously used a different contact email, while all brochures list `info@hyggepaws.com`. The redesign has been updated to use `info@hyggepaws.com` to match the brochures.
 
 ---
 
@@ -180,6 +180,7 @@ This document lists the inconsistencies found between the current website conten
 | 5 | Pick-up time (EN brochure) | 16:00 | 17:00 | 🟡 Medium |
 - Same. it is 4pm but 5pm arrangements can be made on demand.
 | 6 | Email address | hello@ | info@ | 🔴 High |
+- final is info@hyggepaws.com
 | 7 | Phone number | Missing | +45 50343031 | 🔴 High |
 | 8 | Instagram handle | Missing | @hyggepaws.* | 🟠 Medium |
 | 9 | Aversive methods | Missing | Listed | 🟡 Medium |
