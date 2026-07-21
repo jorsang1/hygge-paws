@@ -169,9 +169,14 @@ This document lists the inconsistencies found between the current website conten
 | # | Topic | Website | Brochures | Priority |
 |---|---|---|---|---|
 | 1 | Brand name (EN brochure) | Hygge Paws | Quiet Paws (wrong) | 🔴 High |
+- Hygge Paws for the win!
+- Logo. WIP. Maite.
 | 2 | Business type | Daycare | Dog School | 🟡 Medium |
+- We take day care for now. less pressure for Maite. It cab become a school later.
 | 3 | Max group size | 3–5 | 3–4 | 🟡 Medium |
+- Max 3. 4 is a legal limit that can cause problems.
 | 4 | Arrival time | 09:00 | 08:30 | 🟡 Medium |
+
 | 5 | Pick-up time (EN brochure) | 16:00 | 17:00 | 🟡 Medium |
 | 6 | Email address | hello@ | info@ | 🔴 High |
 | 7 | Phone number | Missing | +45 50343031 | 🔴 High |
