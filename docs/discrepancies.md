@@ -182,7 +182,9 @@ This document lists the inconsistencies found between the current website conten
 | 6 | Email address | hello@ | info@ | 🔴 High |
 - final is info@hyggepaws.com
 | 7 | Phone number | Missing | +45 50343031 | 🔴 High |
+- removed from the website. it could be on the brochure only.
 | 8 | Instagram handle | Missing | @hyggepaws.* | 🟠 Medium |
+- removed. not using it for now.
 | 9 | Aversive methods | Missing | Listed | 🟡 Medium |
 | 10 | Meet & greet | Missing | Mandatory | 🟠 Medium |
 | 11 | Expat / multilingual offer | Missing | Mentioned | 🟢 Low |
