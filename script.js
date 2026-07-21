@@ -60,7 +60,7 @@ const dictionary = {
     scheduleHoursLabel: "Opening hours:",
     scheduleHoursValue: "09:00–16:00",
     scheduleHoursDisclaimer:
-      "Need an earlier drop-off? Entry between 08:00 and 09:00 can be arranged if needed.",
+      "Need an earlier drop-off? Entry between 08:00 and 09:00 can be arranged if needed. If you need a later pick-up, collection between 16:00 and 17:00 can also be arranged.",
     summerTitle: "Summer routine",
     summer1: "09:00–10:00 · Arrival",
     summer2: "10:00–12:00 · Outdoor time",
@@ -170,7 +170,7 @@ const dictionary = {
     scheduleHoursLabel: "Åbningstider:",
     scheduleHoursValue: "09:00–16:00",
     scheduleHoursDisclaimer:
-      "Har du brug for tidligere aflevering? Indlevering mellem 08:00 og 09:00 kan aftales ved behov.",
+      "Har du brug for tidligere aflevering? Indlevering mellem 08:00 og 09:00 kan aftales ved behov. Hvis du har brug for senere afhentning, kan afhentning mellem 16:00 og 17:00 også aftales.",
     summerTitle: "Sommerrutine",
     summer1: "09:00–10:00 · Modtagelse",
     summer2: "10:00–12:00 · Udetid",
@@ -280,7 +280,7 @@ const dictionary = {
     scheduleHoursLabel: "Horario:",
     scheduleHoursValue: "09:00–16:00",
     scheduleHoursDisclaimer:
-      "¿Necesitas dejarlo antes? También se puede negociar la entrada entre las 08:00 y las 09:00 si hace falta.",
+      "¿Necesitas dejarlo antes? También se puede negociar la entrada entre las 08:00 y las 09:00 si hace falta. Y si necesitas recoger más tarde, también podemos arreglar la recogida entre las 16:00 y las 17:00.",
     summerTitle: "Rutina de verano",
     summer1: "09:00–10:00 · Acogida",
     summer2: "10:00–12:00 · Actividad exterior",

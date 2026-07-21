@@ -176,8 +176,9 @@ This document lists the inconsistencies found between the current website conten
 | 3 | Max group size | 3–5 | 3–4 | 🟡 Medium |
 - Max 3. 4 is a legal limit that can cause problems.
 | 4 | Arrival time | 09:00 | 08:30 | 🟡 Medium |
-
+- We agree on 9 to 4pm but 8 to 9 arrangements can be made on demand.
 | 5 | Pick-up time (EN brochure) | 16:00 | 17:00 | 🟡 Medium |
+- Same. it is 4pm but 5pm arrangements can be made on demand.
 | 6 | Email address | hello@ | info@ | 🔴 High |
 | 7 | Phone number | Missing | +45 50343031 | 🔴 High |
 | 8 | Instagram handle | Missing | @hyggepaws.* | 🟠 Medium |
