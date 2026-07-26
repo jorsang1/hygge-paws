@@ -186,8 +186,12 @@ This document lists the inconsistencies found between the current website conten
 | 8 | Instagram handle | Missing | @hyggepaws.* | 🟠 Medium |
 - removed. not using it for now.
 | 9 | Aversive methods | Missing | Listed | 🟡 Medium |
+- to review once Maite is done with the new brochure.
 | 10 | Meet & greet | Missing | Mandatory | 🟠 Medium |
+- Not missing. just the icons.
 | 11 | Expat / multilingual offer | Missing | Mentioned | 🟢 Low |
+- Not important.
 | 12 | Cancellation policy | Missing | 24h policy | 🟢 Low |
+- Not clear if it is needed. To be discussed.
 | 13 | Pick-up at home | Missing | Mentioned | 🟢 Low |
 | 14 | Emergency contact / vet info | Missing | Required | 🟢 Low |
