@@ -133,11 +133,27 @@ img {
 
 .brand {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.05rem;
   text-decoration: none;
   flex-shrink: 0;
   line-height: 1;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0.5rem;
+}
+
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  /*margin-bottom: 0.15rem;
+  margin-top: 2.3rem;
+  margin-left: 1.5rem;*/
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
 }
 
 .brand-name {
@@ -153,6 +169,7 @@ img {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   transition: color var(--transition);
+  margin-top: 0.3rem;
 }
 
 /* Transparent header: white text */
