@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
 :root {
   --sage: #4e6b45;
@@ -16,7 +16,7 @@
   --white: #ffffff;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
 
   --section-pad: clamp(5rem, 9vw, 8rem);
   --radius: 2px;
@@ -419,9 +419,9 @@ img {
   justify-content: center;
   gap: 0.65rem;
   padding: 1.2rem 1.5rem;
-  font-size: 0.68rem;
+  font-size: 0.88rem;
+  font-weight: bold;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   white-space: nowrap;
   flex: 1;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
@@ -433,7 +433,7 @@ img {
 }
 
 .feature-item-icon {
-  font-size: 1rem;
+  font-size: 1.9rem;
   opacity: 0.8;
 }
 
