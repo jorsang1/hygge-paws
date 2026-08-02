@@ -293,7 +293,7 @@ img {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 69vh;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -304,7 +304,7 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('./assets/frontcover-hygge-hund-maite-balder-cookie.jpeg');
+  background-image: url('./assets/frontcover-three-funny-dogs.png');
   background-size: cover;
   background-position: center 40%;
   transform: scale(1.02);
