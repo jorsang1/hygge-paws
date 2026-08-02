@@ -1353,9 +1353,28 @@ select:focus-visible {
     gap: 4px;
   }
 
+  .feature-bar-inner {
+    flex-wrap: wrap;
+  }
+
   .feature-item {
-    padding: 0.9rem 1rem;
-    font-size: 0.64rem;
+    flex: 1 1 50%;
+    padding: 1rem 1rem;
+    font-size: 0.75rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .feature-item-icon {
+    font-size: 1.3rem;
+  }
+
+  .feature-item:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .feature-item:nth-last-child(-n+2) {
+    border-bottom: none;
   }
 
   .contact-right {
