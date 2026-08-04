@@ -282,7 +282,6 @@ Currently **not visible on website**, but shown in brochures:
 - [ ] Consider adding emergency contact/vet requirement to admissions section
 
 ### Priority: LOW
-- [ ] Review multilingual/expat messaging if relevant for marketing
 - [ ] Verify all brochure dates, contact info, and offers are current
 
 ---
