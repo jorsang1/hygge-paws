@@ -11,7 +11,7 @@ NO:
 
 SÍ:
 
-* 3–5 perros máximo,
+* 3 perros máximo,
 * paseos largos,
 * descanso,
 * rutina calmada,

@@ -14,7 +14,7 @@ NO:
 
 SÍ:
 
-* 3–5 perros máximo,
+* 3 perros máximo,
 * paseos largos,
 * descanso,
 * rutina calmada,
@@ -28,7 +28,7 @@ Cuánto podrías ganar
 
 Escenario pequeño y realista
 
-4 perros por día
+3 perros por día
 
 Precio medio:
 
@@ -36,7 +36,7 @@ Precio medio:
 
 Ingreso diario
 
-350 × 4 = 1.400 DKK
+350 × 3 = 1.050 DKK
 
 20 días al mes
 

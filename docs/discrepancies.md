@@ -15,7 +15,7 @@ This document tracks inconsistencies between the website and the tri-fold brochu
 - Email corrected to info@hyggepaws.com
 
 ⚠️ **Alignment issues still present:**
-- Group size messaging (3-5 vs 3-4)
+- Group size messaging (maximum 3)
 - Specific times vs. flexible arrangements
 - Missing operational details (cancellation policy, emergency info)
 
@@ -50,10 +50,10 @@ This document tracks inconsistencies between the website and the tri-fold brochu
 
 | Source | Value |
 |---|---|
-| Website | max **3–5 dogs** |
-| All brochures | max **3–4 dogs** |
+| Website | max **3 dogs** |
+| All brochures | max **3 dogs** |
 
-**Issue:** The website states up to 5 dogs, while all brochures say the maximum is 4. This needs to be aligned.
+**Resolution:** The maximum group size is 3 dogs across the website and brochures.
 
 ---
 
@@ -187,7 +187,7 @@ This document tracks inconsistencies between the website and the tri-fold brochu
 |---|---|---|---|---|---|
 | 1 | Brand name (EN brochure) | Hygge Paws | Hygge Paws | 🟢 Resolved | ✅ Fixed |
 | 2 | Business type | Daycare | Dog School / Daycare | 🟡 Medium | ✅ Accepted (daycare for now) |
-| 3 | Max group size | 3–5 dogs | 3–4 dogs | 🟡 Medium | ❌ Still discrepant |
+| 3 | Max group size | 3 dogs | 3 dogs | 🟢 Resolved | ✅ Aligned |
 | 4 | Arrival time standard | 09:00 | 08:30 | 🟡 Medium | ✅ Arrangements available |
 | 5 | Pick-up time | 15:00–16:00 | 15:00–16:00 | 🟢 Resolved | ✅ Aligned |
 | 6 | Email address | info@hyggepaws.com | info@hyggepaws.com | 🟢 Resolved | ✅ Aligned |
@@ -205,15 +205,15 @@ This document tracks inconsistencies between the website and the tri-fold brochu
 ## Detailed Findings (Post-Update)
 
 ### 1. Group Size ❌
-**Current Discrepancy:**
-- **Website:** "We welcome only 3–5 dogs per day"
-- **Brochures:** Show maximum 3–4 dogs
+**Current Position:**
+- **Website:** "We welcome a maximum of 3 dogs per day"
+- **Brochures:** Show maximum 3 dogs
 
-**Issue:** The website's range is broader (up to 5) than what brochures advertise (max 4).
+**Resolution:** The maximum is explicitly 3 dogs in every language and across all current materials.
 
-**Decision from previous review:** Max 3 dogs, with 4 as legal limit. Website should be clarified.
+**Decision:** Max 3 dogs, with no exceptions. Website and brochures should use the same wording.
 
-**Action needed:** Update website to align with brochure (max 3-4 dogs, not 3-5).
+**Action completed:** Website and documentation now state a maximum of 3 dogs.
 
 ---
 
@@ -267,14 +267,14 @@ Currently **not visible on website**, but shown in brochures:
 2. ✅ **Meet & greet added** — Now listed as mandatory in admission rules
 3. ✅ **Aversive methods added** — Now listed under "Not our style"
 4. ✅ **Email unified** — All materials use `info@hyggepaws.com`
-5. ❌ **Group size (3-5 vs 3-4)** — Website still shows 3–5, should align with brochure's 3–4 max
+5. ✅ **Group size** — Website and brochures now state a maximum of 3 dogs
 
 ---
 
 ## Recommended Next Steps
 
 ### Priority: HIGH
-- [ ] Update max group size in website concept section from "3–5 dogs" to "3–4 dogs"
+- [x] Update max group size in website concept section to "maximum 3 dogs"
 - [ ] Test all brochure language versions (EN, DK, ES) for consistency with website
 
 ### Priority: MEDIUM
