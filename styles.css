@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito:wght@400;600;700&family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Manrope:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap');
 
 :root {
   --sage: #4e6b45;
@@ -19,7 +19,7 @@
   --white: #ffffff;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Quicksand', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
 
   --section-pad: clamp(5rem, 9vw, 8rem);
   --radius: 2px;
