@@ -15,6 +15,21 @@ const localizedRouteMap = {
     en: "/terms-and-conditions.html",
     da: "/da/vilkar-og-betingelser.html",
     es: "/es/terminos-y-condiciones.html"
+  },
+  "/privacy-policy.html": {
+    en: "/privacy-policy.html",
+    da: "/da/privatlivspolitik.html",
+    es: "/es/politica-de-privacidad.html"
+  },
+  "/da/privatlivspolitik.html": {
+    en: "/privacy-policy.html",
+    da: "/da/privatlivspolitik.html",
+    es: "/es/politica-de-privacidad.html"
+  },
+  "/es/politica-de-privacidad.html": {
+    en: "/privacy-policy.html",
+    da: "/da/privatlivspolitik.html",
+    es: "/es/politica-de-privacidad.html"
   }
 };
 
