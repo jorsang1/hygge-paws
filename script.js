@@ -1,9 +1,44 @@
 const select = document.getElementById("language");
 const supportedLanguages = new Set(["en", "da", "es"]);
-const languageUrls = {
-  en: "/",
-  da: "/da/",
-  es: "/es/"
+const localizedRouteMap = {
+  "/terms-and-conditions.html": {
+    en: "/terms-and-conditions.html",
+    da: "/da/vilkar-og-betingelser.html",
+    es: "/es/terminos-y-condiciones.html"
+  },
+  "/da/vilkar-og-betingelser.html": {
+    en: "/terms-and-conditions.html",
+    da: "/da/vilkar-og-betingelser.html",
+    es: "/es/terminos-y-condiciones.html"
+  },
+  "/es/terminos-y-condiciones.html": {
+    en: "/terms-and-conditions.html",
+    da: "/da/vilkar-og-betingelser.html",
+    es: "/es/terminos-y-condiciones.html"
+  }
+};
+
+const removeLocalePrefix = (path) => path.replace(/^\/(da|es)(?=\/|$)/, "") || "/";
+
+const buildLocalizedPath = (lang) => {
+  const normalizedLang = supportedLanguages.has(lang) ? lang : "en";
+  const localizedRoute = localizedRouteMap[window.location.pathname.toLowerCase()];
+  if (localizedRoute) {
+    return localizedRoute[normalizedLang];
+  }
+
+  const pathWithoutLocale = removeLocalePrefix(window.location.pathname);
+  const normalizedPath = pathWithoutLocale.startsWith("/") ? pathWithoutLocale : `/${pathWithoutLocale}`;
+
+  if (normalizedLang === "en") {
+    return normalizedPath;
+  }
+
+  if (normalizedPath === "/") {
+    return `/${normalizedLang}/`;
+  }
+
+  return `/${normalizedLang}${normalizedPath}`;
 };
 
 const detectBrowserLanguage = () => {
@@ -27,7 +62,7 @@ const detectLanguageFromPath = () => {
 
 const redirectToLanguage = (lang) => {
   const selectedLang = supportedLanguages.has(lang) ? lang : "en";
-  const target = languageUrls[selectedLang];
+  const target = buildLocalizedPath(selectedLang);
   const hash = window.location.hash || "";
   const search = window.location.search || "";
   window.location.assign(`${target}${search}${hash}`);
@@ -63,7 +98,8 @@ if (select) {
 
 // ── Header scroll behaviour ─────────────────
 const siteHeader = document.getElementById("site-header");
-if (siteHeader) {
+const forceSolidHeader = siteHeader?.dataset.forceSolid === "true";
+if (siteHeader && !forceSolidHeader) {
   const updateHeader = () => {
     if (window.scrollY > 60) {
       siteHeader.classList.remove("transparent");

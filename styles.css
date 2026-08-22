@@ -1210,6 +1210,60 @@ a.contact-item-value:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* ── Legal pages ───────────────────────────── */
+
+.legal-main {
+  padding-top: 80px;
+}
+
+.legal-section {
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.legal-container {
+  max-width: 860px;
+}
+
+.legal-container h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: #76abae;
+  font-style: italic;
+}
+
+.legal-updated {
+  color: var(--ink-soft);
+  margin-top: 0.7rem;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.legal-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.legal-content h2 {
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  color: #76abae;
+  margin-bottom: 0.8rem;
+}
+
+.legal-content p,
+.legal-content li {
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.legal-content p + p {
+  margin-top: 0.85rem;
+}
+
+.legal-content ul {
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
 /* ── Accessibility ─────────────────────────── */
 
 .sr-only {
