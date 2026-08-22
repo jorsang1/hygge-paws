@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito:wght@400;600;700&family=Quicksand:wght@400;500;700&display=swap');
 
 :root {
   --sage: #4e6b45;
@@ -473,6 +473,7 @@ img {
 
 
 p.section-eyebrow {
+  font-family: 'Nunito', 'Avenir Next', 'Segoe UI', sans-serif;
   font-size: 1.55rem;
 }
 
@@ -507,6 +508,10 @@ p.section-eyebrow {
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
   max-width: 480px;
+}
+
+.about-text p.section-eyebrow {
+  font-size: 1.55rem;
 }
 
 .about-image {
@@ -1049,6 +1054,16 @@ p.section-eyebrow {
   font-size: 1.05rem;
   max-width: 440px;
   margin-bottom: 2.5rem;
+}
+
+.contact-languages {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
 }
 
 .contact-details {
