@@ -856,6 +856,20 @@ p.section-eyebrow {
   color: var(--ink-soft);
 }
 
+.schedule-image {
+  width: min(100%, 820px);
+  margin: 0 auto 2.5rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.schedule-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
 .schedule-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
