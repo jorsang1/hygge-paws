@@ -1100,6 +1100,12 @@ a.contact-item-value:hover {
   text-decoration: underline;
 }
 
+.phone-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
 .contact-right {
   text-align: center;
   padding: 3rem;
