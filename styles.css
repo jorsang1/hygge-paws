@@ -894,12 +894,39 @@ p.section-eyebrow {
   margin-bottom: 0.5rem;
 }
 
+.pricing-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.5fr);
+  align-items: stretch;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  max-width: 1080px;
+  margin: 2.5rem auto 0;
+}
+
+.pricing-image {
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.pricing-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pricing-details {
+  display: flex;
+  align-items: center;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 860px;
-  margin: 2.5rem auto 0;
+  width: 100%;
 }
 
 .pricing-card {
@@ -1320,6 +1347,19 @@ select:focus-visible {
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
+  }
+
+  .pricing-layout {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .pricing-image {
+    min-height: 0;
+  }
+
+  .pricing-image img {
+    max-height: 520px;
   }
 }
 
