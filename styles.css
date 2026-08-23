@@ -520,15 +520,15 @@ p.section-eyebrow {
 }
 
 .about-image img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   transition: transform 0.7s ease;
 }
-
+/* 
 .about-image:hover img {
   transform: scale(1.04);
-}
+} */
 
 .concept-values {
   margin-top: 2rem;
