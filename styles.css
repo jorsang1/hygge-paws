@@ -1349,18 +1349,6 @@ select:focus-visible {
     max-width: 400px;
   }
 
-  .pricing-layout {
-    grid-template-columns: 1fr;
-    max-width: 520px;
-  }
-
-  .pricing-image {
-    min-height: 0;
-  }
-
-  .pricing-image img {
-    max-height: 520px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1444,6 +1432,19 @@ select:focus-visible {
 
   .hero-subtitle {
     max-width: 100%;
+  }
+
+  .pricing-layout {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .pricing-image {
+    min-height: 0;
+  }
+
+  .pricing-image img {
+    max-height: 520px;
   }
 }
 
