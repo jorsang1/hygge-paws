@@ -311,7 +311,7 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('./assets/frontcover-three-funny-dogs.png');
+  background-image: url('./assets/frontcover-three-funny-dogs-blue.jpeg');
   background-size: cover;
   background-position: 60% center;
   transform: scale(1.02);
