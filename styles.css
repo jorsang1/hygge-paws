@@ -329,9 +329,9 @@ img {
   background:
     linear-gradient(
       100deg,
-      rgba(8, 18, 8, 0.82) 0%,
-      rgba(8, 18, 8, 0.58) 38%,
-      rgba(8, 18, 8, 0.18) 62%,
+      rgba(22, 18, 58, 0.52) -33%,
+      rgba(8, 8, 29, 0.38) 38%,
+      rgba(8, 11, 8, 0.18) 62%,
       transparent 80%
     ),
     linear-gradient(
