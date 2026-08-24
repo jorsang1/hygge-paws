@@ -596,11 +596,37 @@ p.section-eyebrow {
   background: var(--white);
 }
 
+.gallery-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 24%) minmax(0, 1fr);
+  grid-template-areas: "image content";
+  align-items: start;
+  gap: clamp(1rem, 2.2vw, 1.75rem);
+}
+
+.gallery-content {
+  grid-area: content;
+}
+
+.gallery-content .section-header {
+  text-align: left;
+}
+
+.gallery-content .section-divider {
+  margin-left: 0;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   margin-top: 2.5rem;
+}
+
+.gallery-grid.gallery-collapsed {
+  grid-template-columns: 1fr;
+  max-width: none;
+  margin-inline: 0;
 }
 
 .gallery-item {
@@ -638,6 +664,10 @@ p.section-eyebrow {
   grid-column: span 2;
 }
 
+.gallery-grid.gallery-collapsed .gallery-item.wide {
+  grid-column: span 1;
+}
+
 .gallery-item.wide img {
   aspect-ratio: 2 / 1;
 }
@@ -649,6 +679,29 @@ p.section-eyebrow {
 .gallery-item.tall img {
   aspect-ratio: auto;
   height: 100%;
+}
+
+.gallery-reveal {
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+.gallery-reveal-button[hidden] {
+  display: none;
+}
+
+.gallery-side-image {
+  grid-area: image;
+  overflow: hidden;
+  background: var(--sand);
+  align-self: center;
+}
+
+.gallery-side-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
 }
 
 /* Lightbox */
@@ -1369,6 +1422,22 @@ select:focus-visible {
 
   .concept-values {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "image";
+    gap: 2rem;
+  }
+
+  .gallery-side-image {
+    display: none;
+  }
+
+  .gallery-side-image img {
+    aspect-ratio: 4 / 5;
   }
 
   .how-layout {
