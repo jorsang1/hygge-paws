@@ -598,23 +598,19 @@ p.section-eyebrow {
 }
 
 .gallery-layout {
-  display: grid;
-  grid-template-columns: minmax(190px, 24%) minmax(0, 1fr);
-  grid-template-areas: "image content";
-  align-items: start;
-  gap: clamp(1rem, 2.2vw, 1.75rem);
+  display: block;
 }
 
 .gallery-content {
-  grid-area: content;
+  width: 100%;
 }
 
 .gallery-content .section-header {
-  text-align: left;
+  text-align: center;
 }
 
 .gallery-content .section-divider {
-  margin-left: 0;
+  margin-left: auto;
 }
 
 .gallery-grid {
@@ -691,17 +687,16 @@ p.section-eyebrow {
   display: none;
 }
 
-.gallery-side-image {
-  grid-area: image;
+.gallery-feature-image {
   overflow: hidden;
   background: var(--sand);
-  align-self: center;
+  margin-top: 2rem;
 }
 
-.gallery-side-image img {
+.gallery-feature-image img {
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -1423,22 +1418,6 @@ select:focus-visible {
 
   .concept-values {
     grid-template-columns: 1fr;
-  }
-
-  .gallery-layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "image";
-    gap: 2rem;
-  }
-
-  .gallery-side-image {
-    display: none;
-  }
-
-  .gallery-side-image img {
-    aspect-ratio: 4 / 5;
   }
 
   .how-layout {

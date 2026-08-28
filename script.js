@@ -166,8 +166,8 @@ if (navToggle && siteNav) {
   }
 
   galleryGrid.classList.add("gallery-collapsed");
-  galleryItems.forEach((item, index) => {
-    if (index > 0) item.hidden = true;
+  galleryItems.forEach((item) => {
+    item.hidden = true;
   });
 
   revealButton.addEventListener("click", () => {
