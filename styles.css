@@ -520,8 +520,9 @@ p.section-eyebrow {
 }
 
 .about-image img {
-  width: 90%;
-  height: 90%;
+  padding-top: clamp(3rem, 6vw, 6rem);
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   transition: transform 0.7s ease;
 }
