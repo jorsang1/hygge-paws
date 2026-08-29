@@ -8,6 +8,7 @@
   --sage-pale: #f0f4ed;
   --hygge-green: #76abae;
   --hygge-blue: #dde8f4;
+  --hygge-blue-dark: #2f3954;
   --hygge-grey: #f1f1f1;
   --cream: #faf8f3;
   --parchment: #f5f0e8;
@@ -67,7 +68,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(2rem, 4.1vw, 3.2rem);
+  font-size: clamp(2rem, 4.1vw, 2.5rem);
   font-weight: 300;
 }
 
@@ -349,6 +350,12 @@ img {
   max-width: 640px;
 }
 
+.hero-content a.cta {
+  background: var(--hygge-blue-dark);
+  color: var(--white);
+  margin-top: 2.5rem;
+}
+
 .hero .eyebrow {
   display: inline-block;
   font-family: var(--font-body);
@@ -438,7 +445,7 @@ img {
 
 .section-header {
   text-align: center;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2rem, 5vw, 2rem);
 }
 
 .section-header h2 {
@@ -543,7 +550,7 @@ p.section-eyebrow {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #76abae;
   margin-bottom: 1rem;
   padding-bottom: 0.7rem;
@@ -855,6 +862,7 @@ p.section-eyebrow {
   color: #76abae;
   margin-bottom: 0.35rem;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .step p {
@@ -898,6 +906,7 @@ p.section-eyebrow {
   letter-spacing: 0.08em;
   color: var(--white);
   font-weight: 700;
+  border-radius: 10px;
 }
 
 .schedule-hours-note {
@@ -1231,21 +1240,28 @@ a.contact-item-value:hover {
   text-align: center;
   padding: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--hygge-blue);
 }
 
 .contact-right h3 {
   font-style: italic;
   font-weight: 300;
   font-size: 2rem;
-  color: var(--white);
+  color: var(--ink);
   margin-bottom: 1rem;
 }
 
 .contact-right p {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--ink-soft);
   font-size: 0.97rem;
   margin-bottom: 2rem;
   line-height: 1.7;
+}
+
+.contact-right a.cta {
+  background: var(--hygge-blue-dark);
+  border: none;
+  color: var(--white);
 }
 
 /* ── CTA buttons ───────────────────────────── */
@@ -1253,7 +1269,8 @@ a.contact-item-value:hover {
 .cta {
   display: inline-block;
   padding: 0.75rem 1rem;
-  border: 1px solid currentColor;
+  border: 3px solid currentColor;
+  border-radius: 10px;
   background: var(--hygge-blue);
   color: var(--ink);
   text-decoration: none;
