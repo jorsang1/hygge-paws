@@ -420,11 +420,11 @@ img {
 }
 
 .section-alt {
-  background: var(--hygge-blue);
+  background: var(--cream);
 }
 
 .section-sand {
-  background: var(--sand);
+  background: var(--white);
 }
 
 .section-sage {
@@ -520,7 +520,7 @@ p.section-eyebrow {
 }
 
 .about-image img {
-  padding-top: clamp(3rem, 6vw, 6rem);
+  padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 4vw, 3rem);
   width: 80%;
   height: 80%;
   object-fit: cover;
@@ -679,7 +679,6 @@ p.section-eyebrow {
 }
 
 .gallery-reveal {
-  margin-top: 1.6rem;
   text-align: center;
 }
 
@@ -688,9 +687,10 @@ p.section-eyebrow {
 }
 
 .gallery-feature-image {
+  width: min(100%, 620px);
   overflow: hidden;
   background: var(--sand);
-  margin-top: 2rem;
+  margin: 2rem auto 0;
 }
 
 .gallery-feature-image img {
@@ -906,7 +906,7 @@ p.section-eyebrow {
 }
 
 .schedule-image {
-  width: min(100%, 820px);
+  width: min(100%, 620px);
   margin: 0 auto 2.5rem;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -1134,7 +1134,6 @@ p.section-eyebrow {
   align-items: flex-start;
   position: relative;
   font-size: 1rem;
-  font-weight: 600;
   color: var(--ink);
   line-height: 1.65;
 }
