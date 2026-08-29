@@ -359,6 +359,10 @@ img {
   margin-top: 2.5rem;
 }
 
+.hero-content a.cta:hover {
+  background: var(--hygge-green);
+}
+
 .hero .eyebrow {
   display: inline-block;
   font-family: var(--font-body);
@@ -902,20 +906,20 @@ p.section-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.65rem 1.4rem;
-  /* border: 1px solid var(--sage); */
-  background: var(--hygge-green);
-  font-size: 0.82rem;
+  padding: 0 1.4rem;
+  font-size: 1.32rem;
   letter-spacing: 0.08em;
-  color: var(--white);
-  font-weight: 700;
+  color: var(--ink-soft);
+  font-weight: 400;
   border-radius: 10px;
+  font-family: var(--font-nav);
 }
 
 .schedule-hours-note {
   margin-top: 0.75rem;
   font-size: 0.9rem;
   color: var(--ink-soft);
+  font-style: italic;
 }
 
 .schedule-image {
@@ -1265,6 +1269,10 @@ a.contact-item-value:hover {
   background: var(--hygge-blue-dark);
   border: none;
   color: var(--white);
+}
+
+.contact-right a.cta:hover {
+  background: var(--hygge-green);
 }
 
 /* ── CTA buttons ───────────────────────────── */
