@@ -137,6 +137,11 @@ img {
   justify-content: space-between;
   gap: 2rem;
   height: 80px;
+  /* Match the hero title's left edge instead of the centered .container width */
+  width: 100%;
+  margin: 0;
+  padding-left: clamp(1.5rem, 6vw, 6rem);
+  padding-right: clamp(1.5rem, 6vw, 6rem);
 }
 
 .brand {
@@ -155,12 +160,9 @@ img {
 }
 
 .brand-logo {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  /*margin-bottom: 0.15rem;
-  margin-top: 2.3rem;
-  margin-left: 1.5rem;*/
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
 }
 
@@ -1542,18 +1544,6 @@ select:focus-visible {
 
   .hero-bg {
     background-position: 72% top;
-  }
-
-  /* Heavier bottom-up gradient so text block is always legible */
-  .hero-overlay {
-    background:
-      linear-gradient(
-        to top,
-        rgba(8, 18, 8, 0.92) 0%,
-        rgba(8, 18, 8, 0.68) 35%,
-        rgba(8, 18, 8, 0.22) 60%,
-        transparent 80%
-      );
   }
 
   .hero-content {
