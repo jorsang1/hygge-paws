@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Manrope:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Manrope:wght@400;500;700&family=Nunito:wght@400;600;700&family=Valley+Sans:wght@400;500;600&display=swap');
 
 :root {
   --sage: #4e6b45;
@@ -21,6 +21,7 @@
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-nav: 'Valley Sans', 'Avenir Next', 'Segoe UI', sans-serif;
 
   --section-pad: clamp(5rem, 9vw, 8rem);
   --radius: 2px;
@@ -210,11 +211,11 @@ img {
 
 .site-nav a {
   text-decoration: none;
-  font-family: var(--font-display);
-  font-size: 0.82rem;
+  font-family: var(--font-nav);
+  font-size: 0.80rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   transition: color var(--transition), opacity var(--transition);
   white-space: nowrap;
 }
@@ -248,7 +249,7 @@ img {
 }
 
 .language-switcher select {
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(255, 255, 255);
   border-radius: var(--radius);
   padding: 0.3rem 1.6rem 0.3rem 0.6rem;
   font: inherit;
@@ -262,7 +263,7 @@ img {
 
 .site-header.transparent .language-switcher select {
   color: rgba(255, 255, 255, 0.82);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='rgba(255,255,255,0.7)' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
 }
 
@@ -1290,14 +1291,15 @@ a.contact-item-value:hover {
 }
 
 .cta-dark {
-  color: #76abae;
+  background: #76abae;
+  color: var(--white);
   border-color: #76abae;
 }
-
+/* 
 .cta-dark:hover {
   background: #76abae;
   color: var(--white);
-}
+} */
 
 /* ── Footer ────────────────────────────────── */
 
@@ -1350,6 +1352,7 @@ a.contact-item-value:hover {
 
 .legal-main {
   padding-top: 80px;
+  background: var(--white);
 }
 
 .legal-section {

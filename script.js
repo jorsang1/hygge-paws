@@ -1,6 +1,21 @@
 const select = document.getElementById("language");
 const supportedLanguages = new Set(["en", "da", "es"]);
 const localizedRouteMap = {
+  "/about.html": {
+    en: "/about.html",
+    da: "/da/om-mig.html",
+    es: "/es/sobre-mi.html"
+  },
+  "/da/om-mig.html": {
+    en: "/about.html",
+    da: "/da/om-mig.html",
+    es: "/es/sobre-mi.html"
+  },
+  "/es/sobre-mi.html": {
+    en: "/about.html",
+    da: "/da/om-mig.html",
+    es: "/es/sobre-mi.html"
+  },
   "/terms-and-conditions.html": {
     en: "/terms-and-conditions.html",
     da: "/da/vilkar-og-betingelser.html",
