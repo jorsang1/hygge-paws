@@ -483,7 +483,7 @@ p.section-eyebrow {
 
 .about-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 0;
   align-items: stretch;
   min-height: 580px;
@@ -507,7 +507,6 @@ p.section-eyebrow {
   color: var(--ink-soft);
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
-  max-width: 480px;
 }
 
 .about-text p.section-eyebrow {
@@ -520,9 +519,10 @@ p.section-eyebrow {
 }
 
 .about-image img {
-  padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 4vw, 3rem);
+  /* padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 4vw, 3rem); */
+  padding-top: clamp(3rem, 6vw, 6rem);
   width: 80%;
-  height: 80%;
+  /* height: 80%; */
   object-fit: cover;
   transition: transform 0.7s ease;
 }
@@ -892,10 +892,11 @@ p.section-eyebrow {
   align-items: center;
   gap: 0.5rem;
   padding: 0.65rem 1.4rem;
-  border: 1px solid var(--sage);
+  /* border: 1px solid var(--sage); */
+  background: var(--hygge-green);
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  color: #76abae;
+  color: var(--white);
   font-weight: 700;
 }
 
