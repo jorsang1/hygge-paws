@@ -547,7 +547,7 @@ p.section-eyebrow {
 } */
 
 .concept-values {
-  margin: 2rem 4rem 0;
+  margin: 3rem 4rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
@@ -556,7 +556,7 @@ p.section-eyebrow {
 .concept-col h3 {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #76abae;
   margin-bottom: 1rem;
@@ -592,7 +592,7 @@ p.section-eyebrow {
 }
 
 .concept-note {
-  margin: 2rem 4rem 0;
+  margin: 3rem 4rem 0;
   padding: 1.4rem 1.8rem;
   background: var(--hygge-blue);
   border-left: 3px solid var(--sage);
@@ -601,7 +601,7 @@ p.section-eyebrow {
   font-style: italic;
   line-height: 1.7;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
@@ -889,7 +889,7 @@ p.section-eyebrow {
 }
 
 .how-image img {
-  width: 90%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
   object-position: center;
