@@ -1411,6 +1411,55 @@ a.contact-item-value:hover {
   gap: 0.7rem;
 }
 
+/* ── About pages ───────────────────────────── */
+
+.about-main {
+  padding-top: 80px;
+  background: var(--white);
+}
+
+.about-section {
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.about-container {
+  max-width: 860px;
+}
+
+.about-container h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: #76abae;
+  font-style: italic;
+}
+
+.about-content h2 {
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  color: #76abae;
+  margin-bottom: 0.8rem;
+}
+
+.about-content h3 {
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  color: var(--hygge-green);
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.about-content p,
+.about-content li {
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.about-content p + p {
+  margin-top: 0.85rem;
+}
+
+.about-content ul {
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
 /* ── Accessibility ─────────────────────────── */
 
 .sr-only {
