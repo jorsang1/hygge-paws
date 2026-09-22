@@ -1430,6 +1430,11 @@ a.contact-item-value:hover {
   font-size: clamp(2.2rem, 5vw, 3.8rem);
   color: #76abae;
   font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.about-content {
+  margin-top: 2rem;
 }
 
 .about-content h2 {
