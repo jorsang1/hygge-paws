@@ -171,11 +171,20 @@
                 <p>Hver dag er fyldt med gåture, hvile, leg og masser af kærlighed.</p>
               </div>
 
-              <div class="gallery-feature-image">
+              <div class="gallery-open">
+                <button class="cta cta-dark" type="button" data-gallery-open aria-controls="gallery-grid">Vis billeder</button>
+              </div>
+
+              <div class="gallery-feature-image" hidden>
                 <img src="../assets/images/dog-camera-h.jpeg" alt="Hund, der kigger ind i kameraet" loading="lazy" />
               </div>
 
-              <div class="gallery-grid" id="gallery-grid">
+              <div class="gallery-reveal" role="tablist" aria-label="Gallerivisninger" hidden>
+                <button class="gallery-reveal-button" id="photos-tab" type="button" role="tab" data-gallery-reveal="gallery-grid" aria-controls="gallery-grid" aria-selected="true">Vis flere billeder</button>
+                <button class="gallery-reveal-button" id="space-tab" type="button" role="tab" data-gallery-reveal="space-gallery-grid" aria-controls="space-gallery-grid" aria-selected="false">Se vores hjem</button>
+              </div>
+
+              <div class="gallery-grid" id="gallery-grid" role="tabpanel" aria-labelledby="photos-tab" hidden>
                 <div class="gallery-item wide" data-index="0">
                   <img src="../gallery/hyggepaws-walk-balder-maite-canals.jpg" alt="Gåtur med hundene ved kanalerne i København" loading="lazy" />
                 </div>
@@ -210,16 +219,15 @@
                   <img src="../gallery/hyggepaws-dog-cookie-sleeping.jpeg" alt="Cookie sover" loading="lazy" />
                 </div>
               </div>
-              <div class="gallery-reveal">
-                <button
-                  class="cta cta-dark gallery-reveal-button"
-                  type="button"
-                  data-gallery-reveal
-                  aria-controls="gallery-grid"
-                  aria-expanded="false"
-                >
-                  Vis flere billeder
-                </button>
+              <div class="gallery-grid" id="space-gallery-grid" role="tabpanel" aria-labelledby="space-tab" hidden>
+                <div class="gallery-item wide"><img src="../gallery/space/01-hygge-paws-living-room-general.jpg" alt="Opholdsstue hos Hygge Paws" loading="lazy" /></div>
+                <div class="gallery-item"><img src="../gallery/space/02-hygge-paws-living-room-beds.jpg" alt="Hundesenge i opholdsstuen" loading="lazy" /></div>
+                <div class="gallery-item"><img src="../gallery/space/03-hygge-paws-living-room-toys.jpg" alt="Legetøj i opholdsstuen" loading="lazy" /></div>
+                <div class="gallery-item"><img src="../gallery/space/04-hygge-paws-living-room-general-2.jpg" alt="Et andet kig på opholdsstuen" loading="lazy" /></div>
+                <div class="gallery-item"><img src="../gallery/space/05-hygge-paws-living-room-general-3.jpg" alt="Opholdsstue med plads til hundene" loading="lazy" /></div>
+                <div class="gallery-item"><img src="../gallery/space/06-hygge-paws-bedroom-general.jpg" alt="Soveværelse hos Hygge Paws" loading="lazy" /></div>
+                <div class="gallery-item"><img src="../gallery/space/07-hygge-paws-bedroom-bed-2.jpg" alt="Seng i soveværelset" loading="lazy" /></div>
+                <div class="gallery-item"><img src="../gallery/space/08-hygge-paws-indoor-fence.jpg" alt="Indendørs hundehegn" loading="lazy" /></div>
               </div>
             </div>
           </div>

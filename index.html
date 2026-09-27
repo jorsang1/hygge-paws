@@ -173,11 +173,20 @@
                 <p>Every day is filled with walks, rest, play, and lots of love.</p>
               </div>
 
-              <div class="gallery-feature-image">
+              <div class="gallery-open">
+                <button class="cta cta-dark" type="button" data-gallery-open aria-controls="gallery-grid">Show photos</button>
+              </div>
+
+              <div class="gallery-feature-image" hidden>
                 <img src="./assets/images/dog-camera-h.jpeg" alt="Dog looking at the camera" loading="lazy" />
               </div>
 
-              <div class="gallery-grid" id="gallery-grid">
+              <div class="gallery-reveal" role="tablist" aria-label="Gallery views" hidden>
+                <button class="gallery-reveal-button" id="photos-tab" type="button" role="tab" data-gallery-reveal="gallery-grid" aria-controls="gallery-grid" aria-selected="true">Show photos</button>
+                <button class="gallery-reveal-button" id="space-tab" type="button" role="tab" data-gallery-reveal="space-gallery-grid" aria-controls="space-gallery-grid" aria-selected="false">View the space</button>
+              </div>
+
+              <div class="gallery-grid" id="gallery-grid" role="tabpanel" aria-labelledby="photos-tab" hidden>
                 <div class="gallery-item wide" data-index="0">
                   <img src="./gallery/hyggepaws-walk-balder-maite-canals.jpg" alt="Walking dogs by the canals of Copenhagen" loading="lazy" />
                 </div>
@@ -212,16 +221,15 @@
                   <img src="./gallery/hyggepaws-dog-cookie-sleeping.jpeg" alt="Cookie the dog sleeping" loading="lazy" />
                 </div>
               </div>
-              <div class="gallery-reveal">
-                <button
-                  class="cta cta-dark gallery-reveal-button"
-                  type="button"
-                  data-gallery-reveal
-                  aria-controls="gallery-grid"
-                  aria-expanded="false"
-                >
-                  Show photos
-                </button>
+              <div class="gallery-grid" id="space-gallery-grid" role="tabpanel" aria-labelledby="space-tab" hidden>
+                <div class="gallery-item wide"><img src="./gallery/space/01-hygge-paws-living-room-general.jpg" alt="Living room at Hygge Paws" loading="lazy" /></div>
+                <div class="gallery-item"><img src="./gallery/space/02-hygge-paws-living-room-beds.jpg" alt="Dog beds in the living room" loading="lazy" /></div>
+                <div class="gallery-item"><img src="./gallery/space/03-hygge-paws-living-room-toys.jpg" alt="Toys in the living room" loading="lazy" /></div>
+                <div class="gallery-item"><img src="./gallery/space/04-hygge-paws-living-room-general-2.jpg" alt="Another view of the living room" loading="lazy" /></div>
+                <div class="gallery-item"><img src="./gallery/space/05-hygge-paws-living-room-general-3.jpg" alt="Living room space for the dogs" loading="lazy" /></div>
+                <div class="gallery-item"><img src="./gallery/space/06-hygge-paws-bedroom-general.jpg" alt="Bedroom at Hygge Paws" loading="lazy" /></div>
+                <div class="gallery-item"><img src="./gallery/space/07-hygge-paws-bedroom-bed-2.jpg" alt="Bed in the bedroom" loading="lazy" /></div>
+                <div class="gallery-item"><img src="./gallery/space/08-hygge-paws-indoor-fence.jpg" alt="Indoor dog fence" loading="lazy" /></div>
               </div>
             </div>
           </div>

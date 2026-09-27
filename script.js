@@ -168,30 +168,43 @@ if (navToggle && siteNav) {
   });
 }
 
-// ── Gallery reveal CTA ───────────────────────
-(function initGalleryReveal() {
-  const galleryGrid = document.querySelector(".gallery-grid");
-  const revealButton = document.querySelector("[data-gallery-reveal]");
-  if (!galleryGrid || !revealButton) return;
+// ── Gallery tabs ─────────────────────────────
+(function initGalleryTabs() {
+  const tabs = Array.from(document.querySelectorAll("[data-gallery-reveal]"));
+  const openButton = document.querySelector("[data-gallery-open]");
+  const featureImage = document.querySelector(".gallery-feature-image");
+  const tabList = document.querySelector(".gallery-reveal");
+  if (!tabs.length || !openButton || !featureImage || !tabList) return;
 
-  const galleryItems = Array.from(galleryGrid.querySelectorAll(".gallery-item"));
-  if (galleryItems.length <= 1) {
-    revealButton.hidden = true;
-    return;
-  }
+  const selectTab = (selectedTab) => {
+    tabs.forEach((tab) => {
+      const selected = tab === selectedTab;
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      document.getElementById(tab.dataset.galleryReveal).hidden = !selected;
+    });
+  };
 
-  galleryGrid.classList.add("gallery-collapsed");
-  galleryItems.forEach((item) => {
-    item.hidden = true;
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectTab(tab));
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex;
+      if (event.key === "Home") nextIndex = 0;
+      else if (event.key === "End") nextIndex = tabs.length - 1;
+      else nextIndex = (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+      selectTab(tabs[nextIndex]);
+      tabs[nextIndex].focus();
+    });
   });
 
-  revealButton.addEventListener("click", () => {
-    galleryItems.forEach((item) => {
-      item.hidden = false;
-    });
-    galleryGrid.classList.remove("gallery-collapsed");
-    revealButton.hidden = true;
-    revealButton.setAttribute("aria-expanded", "true");
+  openButton.addEventListener("click", () => {
+    openButton.parentElement.hidden = true;
+    featureImage.hidden = false;
+    tabList.hidden = false;
+    selectTab(tabs[0]);
+    tabs[0].focus();
   });
 })();
 
@@ -209,7 +222,8 @@ if (navToggle && siteNav) {
   let currentIndex = 0;
   let activeItems = [];
 
-  const getVisibleItems = () => Array.from(galleryItems).filter((item) => !item.hidden);
+  const getVisibleItems = (item) => Array.from(item.closest(".gallery-grid").querySelectorAll(".gallery-item"))
+    .filter((galleryItem) => !galleryItem.hidden);
   const getImageData = (item) => {
     const img = item.querySelector("img");
     return { src: img.src, alt: img.alt };
@@ -224,7 +238,7 @@ if (navToggle && siteNav) {
   };
 
   const openLightbox = (item) => {
-    activeItems = getVisibleItems();
+    activeItems = getVisibleItems(item);
     currentIndex = activeItems.indexOf(item);
     if (currentIndex === -1) return;
 
