@@ -1519,6 +1519,10 @@ select:focus-visible {
   }
 
   .about-image {
+    display: none;
+  }
+  /*
+  .about-image {
     min-height: 360px;
     order: -1;
   }
@@ -1526,7 +1530,7 @@ select:focus-visible {
   .about-image img {
     aspect-ratio: 16 / 9;
   }
-
+  */
   .concept-values {
     grid-template-columns: 1fr;
   }
@@ -1552,10 +1556,11 @@ select:focus-visible {
   }
 
   .how-image {
-    width: min(100%, 360px);
+    /* width: min(100%, 360px);
     min-height: 0;
     aspect-ratio: 9 / 16;
-    margin: 0 auto;
+    margin: 0 auto; */
+    display: none;
   }
 
   .contact-inner {
